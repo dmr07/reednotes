@@ -74,7 +74,7 @@ class Home extends Component {
             <br></br>
             <span class="bar">_______</span>
             <div class="sub-info">
-              <b>About This Website</b> ReedNotes is a crawlable React single-page-application (SPA), hosted on a Node server, and bundled using Webpack. Designed and built by Dan.
+              <b>About This Website</b> ReedNotes is a crawlable React single-page-application (SPA) hosted on a Node server and bundled using Webpack.
             </div>
         </div>
 

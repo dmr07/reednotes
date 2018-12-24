@@ -3,7 +3,7 @@ import {Switch,Route} from "react-router-dom"
 import routes from "./../routes";
 
 const Main = () => (
-  <main>
+  <main class="content">
    <Switch>
       {routes.map((route, i) => <Route key={i} {...route} />)}
     </Switch>

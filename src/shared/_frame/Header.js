@@ -8,10 +8,10 @@ const Header = () => (
     <nav>
         <ul class="navigation">
           <Link to="/"><div class="nav-sig">ReedNotes</div></Link>
-          <li><Link to="/">About</Link></li>
+          <li><Link to="/">Memoir</Link></li>
           <li><Link to="/">Friends</Link></li>
           <li><Link to="/">Things I Love</Link></li>
-          <li><Link to="/">Thoughts</Link></li>
+          <li><Link to="/">Notes</Link></li>
           <li><Link to="/">Design</Link></li>
         </ul>
     </nav>

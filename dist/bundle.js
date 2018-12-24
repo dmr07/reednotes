@@ -77463,6 +77463,10 @@ var _Main = __webpack_require__(/*! ./_frame/Main */ "./src/shared/_frame/Main.j
 
 var _Main2 = _interopRequireDefault(_Main);
 
+var _Footer = __webpack_require__(/*! ./_frame/Footer */ "./src/shared/_frame/Footer.js");
+
+var _Footer2 = _interopRequireDefault(_Footer);
+
 __webpack_require__(/*! ./_frame/Main.styl */ "./src/shared/_frame/Main.styl");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -77473,41 +77477,141 @@ var App = function App() {
     {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 13
+        lineNumber: 14
       },
       __self: undefined
     },
     _react2.default.createElement(_Header2.default, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 14
+        lineNumber: 15
       },
       __self: undefined
     }),
     _react2.default.createElement(_Main2.default, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 15
+        lineNumber: 16
+      },
+      __self: undefined
+    }),
+    _react2.default.createElement(_Footer2.default, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 17
       },
       __self: undefined
     })
   );
 };
 
-// class App extends Component {
-//   render() {
-//     return (
-//       <div className="App">
-//         <div className="App-header">
-//           <img src={logo} className="App-logo" alt="logo" />
-//           <h2>Welcome to React in the server</h2>
-//           </div>
-//         </div>
-//       );
-//   }
-// }
-
 exports.default = App;
+
+/***/ }),
+
+/***/ "./src/shared/_frame/Footer.js":
+/*!*************************************!*\
+  !*** ./src/shared/_frame/Footer.js ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var _jsxFileName = "/Users/Dan/Projects/reednotes/src/shared/_frame/Footer.js";
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRouterDom = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/es/index.js");
+
+__webpack_require__(/*! ./Footer.styl */ "./src/shared/_frame/Footer.styl");
+
+var _logo = __webpack_require__(/*! ../../client/media/logo1.png */ "./src/client/media/logo1.png");
+
+var _logo2 = _interopRequireDefault(_logo);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Footer = function Footer() {
+  return _react2.default.createElement(
+    "footer",
+    {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 7
+      },
+      __self: undefined
+    },
+    _react2.default.createElement(
+      "div",
+      { "class": "footer", __source: {
+          fileName: _jsxFileName,
+          lineNumber: 8
+        },
+        __self: undefined
+      },
+      _react2.default.createElement(
+        "div",
+        { "class": "footer-msg", __source: {
+            fileName: _jsxFileName,
+            lineNumber: 9
+          },
+          __self: undefined
+        },
+        "Designed & Built by"
+      ),
+      _react2.default.createElement(
+        "div",
+        { "class": "footer-sig", __source: {
+            fileName: _jsxFileName,
+            lineNumber: 10
+          },
+          __self: undefined
+        },
+        "Daniel Reed"
+      ),
+      _react2.default.createElement(
+        "span",
+        { "class": "copyright", __source: {
+            fileName: _jsxFileName,
+            lineNumber: 11
+          },
+          __self: undefined
+        },
+        "\xA9"
+      ),
+      _react2.default.createElement(
+        "span",
+        { "class": "copytype", __source: {
+            fileName: _jsxFileName,
+            lineNumber: 11
+          },
+          __self: undefined
+        },
+        " Daniel Reed 2018"
+      )
+    )
+  );
+};
+
+exports.default = Footer;
+
+/***/ }),
+
+/***/ "./src/shared/_frame/Footer.styl":
+/*!***************************************!*\
+  !*** ./src/shared/_frame/Footer.styl ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 
@@ -77603,7 +77707,7 @@ var Header = function Header() {
               },
               __self: undefined
             },
-            "About"
+            "Memoir"
           )
         ),
         _react2.default.createElement(
@@ -77663,7 +77767,7 @@ var Header = function Header() {
               },
               __self: undefined
             },
-            "Thoughts"
+            "Notes"
           )
         ),
         _react2.default.createElement(
@@ -77736,8 +77840,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var Main = function Main() {
   return _react2.default.createElement(
     "main",
-    {
-      __source: {
+    { "class": "content", __source: {
         fileName: _jsxFileName,
         lineNumber: 6
       },
@@ -78059,7 +78162,7 @@ var Home = function (_Component) {
               },
               "About This Website"
             ),
-            " ReedNotes is a crawlable React single-page-application (SPA), hosted on a Node server, and bundled using Webpack. Designed and built by Dan."
+            " ReedNotes is a crawlable React single-page-application (SPA) hosted on a Node server and bundled using Webpack."
           )
         )
       );

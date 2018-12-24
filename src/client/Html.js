@@ -3,8 +3,6 @@
 import serialize from "serialize-javascript";
 import {Helmet} from "react-helmet";
 
-      // <link rel="stylesheet" type="text/css" charset="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
-      // <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
 // Possible memory leak. See https://github.com/nfl/react-helmet
 const helmet = Helmet.renderStatic();
 
@@ -32,21 +30,3 @@ const Html = (body, initialData) => `
 `;
 
 export default Html;
-
-// Used to replace Html(markup, initialData), generate html without import.
-// var bob = `
-//     <!DOCTYPE html>
-//     <head>
-//       ${helmet.title.toString()}
-//       ${helmet.meta.toString()}
-//       <link rel="stylesheet" href="/css/main.css">
-//       <link rel="stylesheet" type="text/css" charset="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
-// <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
-//       <script>window.__initialData__ = ${serialize(initialData)}</script>
-//     </head>
-//     <body>
-//       <div id="root">${markup}</div>
-//       <script src="/bundle.js"></script>
-//     </body>
-//     </html>
-//   `;
