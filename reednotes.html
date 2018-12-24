@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html>
+<!--
+  /////////// /////////// /////////// /////////// ///////////
+  /////////// /////////// /////////// /////////// ///////////
+  Hey!
+
+  [to add: my views on politics -- flawed game design, brain-computer interfaces -- insanity due to significantly lowered inhibitions ]
+
+  books: On Behavior, On Liberty, Autobiography by Bertrand Russell, Godel Escher Bach, World Order, The Adventures of Tom Sawyer, The Idea Factory, Siddhartha, Bhagavad Gita, Self-Reliance & Other Essays - Emerson, On the Character of Physical Law - Feynman, Only the Paranoid Survives, Zen Mind, Beginner's Mind, On Becoming a Person: A Therapist's View of Psychotherapy - Carl Rogers, Oliver Twist, The Intelligent Investor
+
+  Glad to see a fellow programmer.
+  Be advised the site was hacked together in a stream-of-consciousness manner 
+  and by no means production quality. Please refrain from casting judgement by the code alone
+  for it is not lost on me the sorry state the site is in. It is in my plans to refactor the site
+  under a respectable framework, ideally before hell freezes over. 
+
+  Kind regards,
+  Dan
+  /////////// /////////// /////////// /////////// ///////////
+
+  to add: faq:
+
+  Bunch of chinese characters?
+  I'm sorry, I'm fluent in Chinese.
+
+  How tall are you?
+  6'4
+
+  
+  /////////// /////////// /////////// /////////// ///////////
+-->
+  <head>
+    <meta charset="UTF-8">
+    <title>ReedNotes | Home</title>
+    <link rel="icon" type="image/png" href="favicon.png" />
+  </head>
+  <body>
+    <style>
+
+    html {
+          /*background-color: rgb(255,250,230);*/
+          /*background-color: rgb(250,250,250);*/
+    /*background-color: #fff;*/
+    padding: 0 0px;
+    /*background: url(pattern7.png) repeat;*/
+    user-select: none;
+    background-size: 280px;}
+
+      body {
+        /*color: #223258;*/
+        color: #292e31;
+        background-color: #FFF;
+        margin: 0;
+        /*border-radius: 10px;*/
+        /* border-top: 8px solid #c50016; */
+        box-sizing: border-box;
+        font-family: 'graphik lcg web';
+        font-family: 'SF Pro Text';
+        /*font-family: 'adobe calson pro';*/
+        text-rendering: geometricPrecision;
+        -webkit-font-smoothing: antialiased;
+      }
+      .page-content {
+        width: 860px;
+        margin: auto;
+        padding: 40px 60px;
+      }
+      .nav-sig {
+        /*font-family: 'DanmarkURWTBol'; */
+        /* text-transform: uppercase; */
+        font-size: 1.6em !important;
+        color: #000;
+        display: inline-block;
+        letter-spacing: .03em;
+        /* word-spacing: -0.2em; */
+        color: #fff;
+        margin-left: -30px;
+        text-align: center;
+        margin: 2px 20px 2px 50px;
+        font-family: 'Autograf PERSONAL USE ONLY';
+      }
+      .header{
+    font-size: 26px;
+    margin: 100px 0 20px;
+    color: #000;
+        font-family: 'graphik lcg web';
+        font-family: 'Myriad Pro';
+
+    /* font-family: "SF Pro Text"; */
+    /* font-family: "Nocturno Display Pro"; */
+    /* font-family: "Crimson Text"; */
+    /* font-style: italic; */
+    font-weight: 600;
+    /* text-transform: uppercase; */
+    padding-bottom: 10px;
+    /* letter-spacing: .05em; */
+    word-spacing: 0em;
+      }
+      .header.intro {
+        margin-top: 50px;
+      }
+      * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.body-content {
+  margin-left: 180px;
+}
+      .paragraphs, .paragraph-intro{
+        font-size: 1em;
+        width: 520px;
+        /*font-family: 'adobe caslon pro';*/
+        /*font-family: 'lusitana';*/
+        font-family:'SF Pro Text';
+        font-weight: 400;
+        line-height: 1.5em;
+      }
+      .navigation {
+    /* border-top: 1px solid #ff8600; */
+    /* border-bottom: 1px solid #ff8600; */
+    text-align: left;
+    padding-top: 7px;
+    font-weight: 500;
+    /* width: 100%; */
+    font-family: 'graphik lcg web';
+    padding-bottom: 7px;
+    width: 680px;
+    position: fixed;
+    background-color: rgba(0,0,0,.85);
+    bottom: 20px;
+    z-index: 3;
+    border-radius: 5px;
+    left: calc(50% - 340px);
+    /* margin-left: -10px; */
+}
+      .navigation span {
+        display: inline-block;
+        padding: 10px 14px;
+        /* letter-spacing: .02em; */
+        transition: .3s;
+        color:#fff;
+        /*text-transform: uppercase;*/
+        font-size: .8em;
+      }
+      .profile-wrapper {
+        /*position: absolute;*/
+        margin-top: 100px;
+      }
+      .profile {
+    /* width: calc(100% + 80px); */
+    /* margin-top: -20px; */
+    /* margin-left: -40px; */
+    width: 170px;
+    height: 170px;
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+    /* border-top: 1px solid #eee; */
+    /* border-bottom: 1px solid #eee; */
+    border-radius: 8px;
+    background: url(media/profile-l.jpg) 35% 70% no-repeat;
+    margin-bottom: 10px;
+    /*-webkit-filter: grayscale(10%);*/
+    /*filter: grayscale(10%);*/
+    background-size: 150%;
+    /*float: left;*/
+    margin-right: 25px;
+      }
+      .caption {
+    color: #444;
+    font-size: .8em;
+    margin-bottom: 30px;
+      }
+      .navigation div:hover {
+        /* border-bottom: 5px solid #c50016; */
+        color: rgb(164,117,11);
+        cursor:pointer;
+      }
+      .timestamp {
+    /*font-family: "SF Compact Text";*/
+    margin-bottom: 60px;
+    font-weight: 500;
+    color: #aaa;
+    font-size: .8em;
+    /*text-transform: uppercase;*/
+      }
+      .timestamp span {
+        color: #333;
+      }
+      .paragraphs::first-letter { 
+    font-size: 400%;
+    font-weight: 600;
+    font-family: "Nocturno Display";
+    margin-top: 10px;
+    padding-right: 4;
+    width: 20px;
+    letter-spacing: .1em;
+    float: left;
+}
+      .photo-credit {
+        font-style: normal;
+    color: #bbb;
+    margin-top: 4px;
+    display: block;
+    font-size: .96em;
+    font-family: 'roboto';
+      }
+
+          .sidebar {
+    top: 200px;
+    position: fixed;
+    margin-left: 550px;
+    width: 200px;
+    font-size:.96em;
+    color: #666;
+    opacity: .6;
+    line-height: 1.4em;
+    font-family: "SF Pro Text";
+    }
+    .sidebar:hover {
+      opacity: 1;
+    }
+    .bio {
+      font-family: "Nocturno Display Pro";
+      text-align: right;
+      font-size: 14px;
+      color: #000;
+      margin-bottom: 20px;
+      font-weight: 300;
+    }
+    .p-break {
+      height: 14px;
+    }
+    </style>
+    <!-- <div class="sidebar">
+      <span style="font-family: roboto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 13px;
+    letter-spacing: .04em;
+    text-transform: uppercase;">Hey!</span>
+      <br><br>
+      Admittedly the site has not received the attention it deserves
+      If the information is dated, best you reach me so via <span style="color: #007ae9;">email</span>.
+      <br><br>
+      <span style="font-family:'Autograf PERSONAL USE ONLY'; font-size: 24px; font-weight: 500">D.Reed</span>
+    </div> -->
+  <!-- <div class="bio">Super omnia veritas humanitas et labos</div> -->
+  <div class="navigation">
+    <div class="nav-sig">ReedNotes</div>
+    <span>About</span>
+    <span>Friends</span>
+    <span>Things I Love</span>
+    <span>Thoughts</span>
+    <span>Design</span>
+  </div>
+
+  <div class="page-content">
+
+
+  <!-- <div class="caption">In Vancouver circa 2018. <br><span class="photo-credit">Photographed by Erik Dambrouse<span></div> -->
+<div class="intro-wrapper">
+  <div class="profile-wrapper">
+    <div class="profile"></div>
+  </div>
+  <div class="header intro">Hi. I'm Dan</div>
+  <div class="paragraph-intro">
+      I'm a student reading mathematics and physics at the University of British Columbia. Previously I cofounded a company that developes computer vision software. Currently interested in machine learning, genetic engineering, and bohmian mechanics. <a href="#">More about me</a>
+      <br>
+      <span style="opacity: .3">_______</span>
+      <div class="quick-access">
+        <b>ReedNotes</b> was put together rather unscrupulously as you might see from the source code. Much is still in flux, but I intend to refactor it under a respectable framework after the permanent fixtures settle into place.
+        <br>
+        <br>
+      </div>
+  </div>
+</div>
+<style>
+  .quick-access {
+    font-size:14px;
+    /*color:#7b776b;*/
+    margin-top: 2px;
+  }
+</style>
+
+<div class="body-content">
+<div style="height: 1000px"></div>
+</div>
+
+<div class="body-content">
+  <div class="header" style="margin-top: 70px">A Memoir of Sorts</div>
+  <div class="timestamp">Updated <span>June 2018</span></div>
+<div class="paragraphs">
+  Mother never took to living near an oil refinery; it didn't bother me so much &mdash; I kind of liked it rather. We lived in a small town an hour north of San Francisco, the kind of town where everyone knew each other, and where everyday felt like a sunny afternoon. Mom and dad worked in the wine business, and every so often I got to tag along to Napa Valley or wherever. I loved it. Our little two story town house overlooked golden hills that rolled on for miles across the Carquinez Strait &mdash; the dry warm breeze, the dusty trails, the train that would encircle, and at nights at the town dock surrounded by palms, I would quietly sit and watch the stars. To this day, these are still among the happinest times in recent memory. 
+  <div class="p-break"></div>
+  During summers, I took every opportunity to slink off to UC Berkeley. I loved auditing lectures, and this drove the attendance person crazy. The atmosphere at Berkeley imbued a sense of excitement about science and technology that has been with me ever since. 
+  By the time I matriculated to university, I had my eye so dead set on Silicon Valley that I didn't end up staying for very long. Around junior year, I got antsy, boarded on a plane to Boston and started a software company.
+  <div class="p-break"></div>
+  The company I started in my early twenties with my dear friend Will and Sergei has been the centerpiece of my life so far. The advent of HTML5 video presented an opportunity to link powerful object tracking and identification technology with in-video interaction. We scrambled to get working prototypes and to secure initial customer interest. Will was at Harvard at the time but got us funded anyway; he was a big source of our early momentum. Admitted I was very lucky to have had such wonderful partners and to have been in that area. During my stint, I served as Partner, President, and when Will went to Shanghai to set up a distribution arm, CEO. Our office eventually relocated to Los Angeles, where I served my remaining days. The people with whom I embarked on this journey and have met along the way are much the same people for whom I hold my deepest and warmest affection and admiration... They are very dear to me.
+  <div class="p-break"></div>
+  At any rate, these are the notes in my melodies. Some are ill-timed, most are serendipitous &mdash; all, I have found worthwhile.
+</div>
+<div>
+  <div class="header">Friends</div>
+    <div class="timestamp">Updated <span>June 2018</span></div>
+    <div class="paragraphs">
+      Maybe it's trite to say that starting a company is a bit like going into battle, but I've certainly found the analogy apt. In the process, you are likey to discover the people who would stand by you when no one else would &mdash; in that sense, it's like a band of brothers. By no means is this list exhaustive, but here's a few I've had the good fortune of meeting:
+  <div class="p-break"></div>
+      Earliest memories I have were drafting and leaving it in Will's room a fake acceptance letter from Penn, and drifting fecklessly together in a snowy deserted parking lot. For me at least those days are as memorable any. Later both of us left school to start a company together. He pulled a lot of weight early on; truly, not enough credit can be attributed to him. There is no one more capable of carrying something out by sheer force of will than Will Joy (suitably).
+  <div class="p-break"></div>
+      Jeff Stern is one of the private investors in my company. He is one of the warmest people I have ever met and someone who I try to emulate daily. He exudes a level of persistence and charisma I've seen few people match. I learnt a lot from him of what it means to be on the periphery of a team, yet still have a very palpable presence. 
+  <div class="p-break"></div>
+      I have probably spent more time with Serge Gmyria than anyone outside my family. As most people who knew me in my early twenties will tell you, I was an unruly kid. Those who had the misfortune of working for or with me had to put up with a lot of my nonsense. Sergie has endured more of it than anyone, and I "normalized" quite a bit as result of his friendship. It's hard to express my gratitude for how long he stuck it out with me and the sacrifices he's made. He is as kindhearted and thoughtful a friend as anyone could ask for.
+  <div class="p-break"></div>
+      As these things go, so much is tacit, and any glimmer is but a fraction of the whole. 
+  <div class="p-break"></div>
+      <i>Music nourishes the soul.</i>
+  <div class="p-break"></div>
+      Life and music are as inseparable as they are synonymous. I love the sound of the organ, particularly for when Fugues are played. I'm also a big fan of Bob Dylan. 
+      <br><br>
+      The role of books has mainly been to make sense of daily life that are sometimes leave me puzzled. Fiction has been helpful bringing me back to humanity when I am feeling isolated. Ralph Emerson, Bertrand Russell, John Stuart Mills are among my favorites. 
+      <br><br>
+      Attempts at organizing my favorite works of art has invariably resulted in the folder getting lost or becoming disheveled. Visual art has not been a focus of mine since high school, albiet over the years I have derived some delight in paintings, here are some of them:
+      <br><br>
+      Movies & Shows
+      I don't watch a lot of movies and shows. The best ones tend to be ones I'd watch and rewatch. These are some of my favorites:
+
+      Ratatouille
+      The attention to detail is inspiring: the way the rats breathing would be reflected in their fur, the reflections in the pots and pans that distorted as a function of distance and texture. It was as much a technical marvel as it was a work of craftsmanship.
+
+      Friends
+      Many people in my age group grew up watching friend, I among one of them. Not much to say here. My favorite character is probably Pheobe. Matthew Perry and David Schwimmer are just incredible actors given their role. Scripting is witty, love everything about the show.
+
+      Lost in Translation
+      Probably my favorite movie of all time, though it's hard pinpoint why I enjoyed it so much. If I had to describe it in one word, it's that it's subtle.
+
+      The Pianist
+      Probably the most believable acting I've ever seen by Adrien Brody.
+
+      The Intouchables
+      This film is in French, but it's incredibly heartfelt. Probably goes to number two favorites.
+
+      No Direction Home
+      Bob Dylan is one of my heros, and this is a documentary on Bob Dylan by  Martin Scorsese. His life was much a mystery until this was film. It was really cool to see behind the scenes. 
+
+      U2 From the Sky Down
+      Documentary about the struggles of the band U2 after the release of X. Pretty good.
+
+      Bourne Series
+      Crime thriller series, I've not read the book.
+
+      American Psycho
+      Great show.
+
+      The Departed
+
+  </div>
+</div>
+</div>
+
+</div>
+<style>
+.footer-img {
+  display: inline-block;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    background: url(maple.png) center no-repeat;
+    background-size: cover;
+    width: 23px;
+    height: 23px;
+    vertical-align: bottom;
+    margin-left: 6px;
+    opacity: .6;
+}
+.footer {
+  background: #000;
+  padding: 30px;
+ color: #fff; 
+ font-size: 1.6em;
+ text-align: center
+}
+.copyright {
+  font-size: 12px;
+  color: #ccc;
+    font-weight: 400;
+    font-family: roboto;
+    padding-top: 10px;
+    font-family: "helvetica neue";
+}
+.copytype {
+  font-size: 10px;
+  color: #bbb;
+    font-weight: 400;
+        font-family: 'graphik lcg web';
+    /*font-family: "helvetica neue";*/
+}
+.footer-sig {
+   font-family: 'Autograf PERSONAL USE ONLY'; 
+  margin-bottom: 10px;
+}
+.footer-msg {
+  font-size: 14px;
+}
+</style>
+  <footer class="footer">
+  <div class="footer-sig">DMR</div>
+  <span class="copyright">&copy;</span><span class="copytype"> Daniel Reed 2018</span>
+</footer>
+  </body>
+
+</html>

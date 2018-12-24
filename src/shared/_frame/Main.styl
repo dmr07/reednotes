@@ -1,0 +1,55 @@
+@import "./Colors"
+font = "SF Pro Text", "Helvetica Neue", Arial
+
+* 
+  box-sizing border-box;
+
+
+// Overwrites
+.btn 
+  border-radius: 6px
+  background-color transparent
+
+html 
+  background-color: #fff
+  padding: 0 0px;
+  user-select: none;
+  
+body
+  // color #292e31;
+  background-color #FFF;
+  margin: auto;
+  padding: 40px 60px;
+  font-size: 16px;
+  box-sizing border-box;
+  text-rendering: geometricPrecision;
+  max-width: 960px;
+  width: 860px;
+  font-family font, sans-serif
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: colordefault
+  background-color transparent;
+  
+h1, h2, h3, h4, h5, p
+  line-height: 1.4em
+  
+input, button, submit 
+  border:none; 
+  background-color transparent
+  outline:none;
+  
+a 
+  color: colordefault
+  cursor: hover
+  transition: color .2s ease-out
+  &:hover
+    text-decoration: none
+    color: colorlink
+  
+ul
+  list-style:none
+
+img 
+  max-width 100%;
+  height auto;

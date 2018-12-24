@@ -1,0 +1,81 @@
+@import "../../_frame/Colors.styl"
+
+contentwidth = 450px
+
+.home-poster
+  .poster-label
+    font-weight: 600
+    text-transform: uppercase
+    font-family: "SF Compact Text"
+    color: colorbody
+    margin-top: 20px
+  .poster-descr
+    font-size: 26px
+    height: 4.4em
+    font-weight: 300;
+    margin: 10px 0;
+    width contentwidth
+  .poster-readmore
+    color: colorlink !important
+    font-weight: 600
+    font-size: 13px
+  .readmore-arrow
+    font-size: 10px;
+    position: absolute;
+    margin-top: -2px;
+    margin-left: 2px;
+    
+  .poster-calltoaction
+    margin-top: -65px;
+    z-index: 20;
+    position: absolute;
+    .poster-btn 
+      padding: 10px 20px
+      margin-right: 10px
+      font-weight: 600
+      font-size: 14px
+      border 2px solid transparent
+      &.main
+        border 2px solid #322
+        color: #322
+      &:hover
+        background-color: #322
+        color: #fff
+  
+
+// Animation from: https://codepen.io/Rowno/pen/Afykb
+.home-poster
+  .carousel 
+    height: 300px
+    
+    .carousel-indicators 
+      right: 0;
+      left: unset;
+      text-align right
+      li
+        background-color: #eee
+
+    .carousel-inner 
+      .item 
+          transition-property: opacity;
+      
+      .item,
+      .active.left,
+      .active.right 
+        opacity: 0;
+      
+      .active,
+      .next.left,
+      .prev.right 
+        opacity: 1;
+      
+      .next,
+      .prev,
+      .active.left,
+      .active.right 
+        left: 0;
+        transform: translate3d(0, 0, 0);
+      
+    .carousel-control 
+        z-index: 2;
+    

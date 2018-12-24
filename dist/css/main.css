@@ -1,0 +1,323 @@
+header {
+  text-align: left;
+  font-weight: 500;
+  font-family: 'graphik lcg web';
+  padding: 4px 0 5px;
+  width: 680px;
+  position: fixed;
+  background-color: rgba(0,0,0,0.85);
+  bottom: 20px;
+  z-index: 3;
+  border-radius: 5px;
+  left: calc(50% - 340px);
+}
+header ul {
+  margin: 0;
+  padding: 0;
+}
+header li {
+  display: inline-block;
+}
+header li a {
+  padding: 10px 14px;
+  transition: 0.3s;
+  color: #fff;
+  font-size: 0.8em;
+}
+header .nav-sig {
+  font-size: 1.6em !important;
+  color: #000;
+  display: inline-block;
+  letter-spacing: 0.03em;
+  color: #fff;
+  margin-left: -30px;
+  text-align: center;
+  margin: 2px 20px 2px 50px;
+  font-family: 'Autograf PERSONAL USE ONLY';
+}
+header .header-logo-text {
+  text-align: left;
+  display: inline-block;
+  font-size: 16px;
+}
+header .header-links {
+  float: right;
+}
+header .header-links li {
+  display: inline-block;
+  padding: 6px 20px;
+}
+header .header-links li.header-login {
+  background-color: #f2a500;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 13px;
+}
+header .header-links li.header-login a {
+  color: #fff !important;
+}.home-poster .poster-label {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: "SF Compact Text";
+  color: #606770;
+  margin-top: 20px;
+}
+.home-poster .poster-descr {
+  font-size: 26px;
+  height: 4.4em;
+  font-weight: 300;
+  margin: 10px 0;
+  width: 450px;
+}
+.home-poster .poster-readmore {
+  color: #f2a500 !important;
+  font-weight: 600;
+  font-size: 13px;
+}
+.home-poster .readmore-arrow {
+  font-size: 10px;
+  position: absolute;
+  margin-top: -2px;
+  margin-left: 2px;
+}
+.home-poster .poster-calltoaction {
+  margin-top: -65px;
+  z-index: 20;
+  position: absolute;
+}
+.home-poster .poster-calltoaction .poster-btn {
+  padding: 10px 20px;
+  margin-right: 10px;
+  font-weight: 600;
+  font-size: 14px;
+  border: 2px solid transparent;
+}
+.home-poster .poster-calltoaction .poster-btn.main {
+  border: 2px solid #322;
+  color: #322;
+}
+.home-poster .poster-calltoaction .poster-btn:hover {
+  background-color: #322;
+  color: #fff;
+}
+.home-poster .carousel {
+  height: 300px;
+}
+.home-poster .carousel .carousel-indicators {
+  right: 0;
+  left: unset;
+  text-align: right;
+}
+.home-poster .carousel .carousel-indicators li {
+  background-color: #eee;
+}
+.home-poster .carousel .carousel-inner .item {
+  transition-property: opacity;
+}
+.home-poster .carousel .carousel-inner .item,
+.home-poster .carousel .carousel-inner .active.left,
+.home-poster .carousel .carousel-inner .active.right {
+  opacity: 0;
+}
+.home-poster .carousel .carousel-inner .active,
+.home-poster .carousel .carousel-inner .next.left,
+.home-poster .carousel .carousel-inner .prev.right {
+  opacity: 1;
+}
+.home-poster .carousel .carousel-inner .next,
+.home-poster .carousel .carousel-inner .prev,
+.home-poster .carousel .carousel-inner .active.left,
+.home-poster .carousel .carousel-inner .active.right {
+  left: 0;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+.home-poster .carousel .carousel-control {
+  z-index: 2;
+}.home-wrapper {
+  font-size: 1em;
+  width: 520px;
+  font-family: 'SF Pro Text';
+  font-weight: 400;
+  line-height: 1.5em;
+}
+.home-wrapper .bar {
+  opacity: 0.3;
+}
+.home-wrapper .profile-wrapper {
+  margin-top: 100px;
+}
+.home-wrapper .profile-wrapper .profile-photo {
+  width: 160px;
+  height: 160px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  margin-right: 25px;
+}
+.home-wrapper .intro {
+  font-size: 26px;
+  margin: 100px 0 20px;
+  color: #000;
+  font-family: 'Myriad Pro';
+  font-weight: 600;
+  padding-bottom: 10px;
+  word-spacing: 0em;
+  margin-top: 50px;
+}
+.home-wrapper .sub-info {
+  font-size: 14px;
+  margin-top: 2px;
+}
+.home-info-title {
+  border-top: 1px solid rgba(0,0,0,0.06);
+  font-weight: 500;
+  padding: 20px 0 6px;
+  font-size: 14px;
+  text-align: center;
+}
+.home-info-title button {
+  opacity: 0.6;
+  margin: 0 2px 0;
+}
+.home-info-title button.active {
+  font-weight: 700;
+  opacity: 1;
+}
+.home-info {
+  padding: 0 10px;
+  border-radius: 6px;
+}
+.home-info .info-col {
+  padding: 4px 8px;
+}
+.home-info h3 {
+  font-size: 10px;
+  color: #606433;
+  font-weight: 800;
+  margin: 4px 0 4px;
+  text-transform: uppercase;
+}
+.home-info p {
+  font-size: 15px;
+  color: #1c1e21;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+.home-info .info-label {
+  text-transform: uppercase;
+  font-family: "SF Compact Text";
+  font-size: 10px;
+  font-weight: 700;
+  color: #606770;
+}.newslist {
+  background-color: #f6f6ef;
+}
+.newslist small {
+  color: #828282;
+}
+.header {
+  background-color: #6b32e1;
+  color: #fff;
+  padding: 3px;
+  height: 28px;
+}
+.header-title {
+  float: left;
+}
+.sort {
+  float: right;
+  font-size: 13px;
+  color: #c6b0f1;
+  margin: 4px 15px 0 0;
+}
+.sort a {
+  text-decoration: none;
+  margin: 0 5px;
+  color: #c6b0f1;
+}
+.sort-item {
+  cursor: pointer;
+}
+.sort-selected {
+  font-weight: bold;
+}
+.logo {
+  margin-top: 2px;
+  margin-right: 10px;
+  border: 1px #fff solid;
+  vertical-align: bottom;
+}
+.news-item {
+  padding: 0 15px;
+}
+.news-position {
+  color: #828282;
+}
+.news-details {
+  display: block;
+  margin-left: 40px;
+  margin-top: -12px;
+}.testheight {
+  height: 400px;
+}* {
+  box-sizing: border-box;
+}
+.btn {
+  border-radius: 6px;
+  background-color: transparent;
+}
+html {
+  background-color: #fff;
+  padding: 0 0px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+body {
+  background-color: #fff;
+  margin: auto;
+  padding: 40px 60px;
+  font-size: 16px;
+  box-sizing: border-box;
+  text-rendering: geometricPrecision;
+  max-width: 960px;
+  width: 860px;
+  font-family: "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #1c1e21;
+  background-color: transparent;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  line-height: 1.4em;
+}
+input,
+button,
+submit {
+  border: none;
+  background-color: transparent;
+  outline: none;
+}
+a {
+  color: #1c1e21;
+  cursor: hover;
+  transition: color 0.2s ease-out;
+}
+a:hover {
+  text-decoration: none;
+  color: #f2a500;
+}
+ul {
+  list-style: none;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+/*# sourceMappingURL=main.css.map*/
