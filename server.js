@@ -647,7 +647,9 @@ var Footer = function Footer() {
           },
           __self: undefined
         },
-        "Designed & Built by"
+        "\u2014",
+        "\xA0 Designed and Built by \xA0",
+        "\u2014"
       ),
       _react2.default.createElement(
         "div",
@@ -657,7 +659,7 @@ var Footer = function Footer() {
           },
           __self: undefined
         },
-        "Daniel Reed"
+        "Daniel M. Reed"
       ),
       _react2.default.createElement(
         "span",
@@ -677,11 +679,13 @@ var Footer = function Footer() {
           },
           __self: undefined
         },
-        " Daniel Reed 2018"
+        " 2019 Daniel Reed \xA0 | \xA0 All Rights Reserved"
       )
     )
   );
 };
+
+// <div class="copytype">All Rights Reserved</div>
 
 exports.default = Footer;
 
@@ -784,13 +788,13 @@ var Header = function Header() {
           },
           _react2.default.createElement(
             _reactRouterDom.Link,
-            { to: "/", __source: {
+            { to: "/notes", __source: {
                 fileName: _jsxFileName,
                 lineNumber: 11
               },
               __self: undefined
             },
-            "Memoir"
+            "Notes"
           )
         ),
         _react2.default.createElement(
@@ -804,13 +808,13 @@ var Header = function Header() {
           },
           _react2.default.createElement(
             _reactRouterDom.Link,
-            { to: "/", __source: {
+            { to: "/design", __source: {
                 fileName: _jsxFileName,
                 lineNumber: 12
               },
               __self: undefined
             },
-            "Friends"
+            "Design"
           )
         ),
         _react2.default.createElement(
@@ -824,7 +828,7 @@ var Header = function Header() {
           },
           _react2.default.createElement(
             _reactRouterDom.Link,
-            { to: "/", __source: {
+            { to: "/thingsilove", __source: {
                 fileName: _jsxFileName,
                 lineNumber: 13
               },
@@ -844,13 +848,13 @@ var Header = function Header() {
           },
           _react2.default.createElement(
             _reactRouterDom.Link,
-            { to: "/", __source: {
+            { to: "/friends", __source: {
                 fileName: _jsxFileName,
                 lineNumber: 14
               },
               __self: undefined
             },
-            "Notes"
+            "Friends"
           )
         ),
         _react2.default.createElement(
@@ -864,13 +868,13 @@ var Header = function Header() {
           },
           _react2.default.createElement(
             _reactRouterDom.Link,
-            { to: "/", __source: {
+            { to: "/memoir", __source: {
                 fileName: _jsxFileName,
                 lineNumber: 15
               },
               __self: undefined
             },
-            "Design"
+            "Memoir"
           )
         )
       )
@@ -984,29 +988,35 @@ var _Home = __webpack_require__(/*! ./views/home/Home */ "./src/shared/views/hom
 
 var _Home2 = _interopRequireDefault(_Home);
 
-var _News = __webpack_require__(/*! ./views/news/News */ "./src/shared/views/news/News.js");
+var _Notes = __webpack_require__(/*! ./views/notes/Notes */ "./src/shared/views/notes/Notes.js");
 
-var _News2 = _interopRequireDefault(_News);
+var _Notes2 = _interopRequireDefault(_Notes);
 
-var _InfoInvestor = __webpack_require__(/*! ./views/info_investor/InfoInvestor */ "./src/shared/views/info_investor/InfoInvestor.js");
+var _Memoir = __webpack_require__(/*! ./views/memoir/Memoir */ "./src/shared/views/memoir/Memoir.js");
 
-var _InfoInvestor2 = _interopRequireDefault(_InfoInvestor);
+var _Memoir2 = _interopRequireDefault(_Memoir);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// import InfoOverview from "./views/info_overview/InfoOverview";
+// import ThingsILove from "./views/thingsilove/ThingsILove";
 
 var routes = [{
   path: "/",
   component: _Home2.default,
   exact: true
 }, {
-  path: "/news",
-  component: _News2.default,
+  path: "/notes",
+  component: _Notes2.default,
   exact: true
-}, {
-  path: "/learn/investor",
-  component: _InfoInvestor2.default,
+},
+// {
+//   path: "/thingsilove",
+//   component: ThingsILove,
+//   exact: true
+// },
+{
+  path: "/memoir",
+  component: _Memoir2.default,
   exact: true
 }];
 
@@ -1065,6 +1075,17 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+// TO ADD: Hire me for design.
+// Please note that I accept clients very sparingly, with the same process of evaluation. My primary criteria is whether I can meaningfully contribute to a vivid and compelling brand that aligns with the service or product. If you wish to engage me, my process is as follows:
+// You will send me a prospectus, no more than page, containing the name and what you wish to convey in the logo and a brief description of the product written for the consumer. You will be asked to pay $795 retainer fee (deducted from the price if we decide to move forward). If I cannot examine your project within the specified time frame, I will refund the fee. Within a week I will respond with whether I wish to move forward. If I do, I will contact you in person or over the phone. Pricing will be determined once the specifications have been made clear.
+// My fees range between $21,999 - $79,999. You will receive one final design, guidelines of use, all original digital copies for modification. I will also confer copyright of the work onto you or your organisation, but retain recognition of authorship. Through out the term of project, only in exceptional cases will work-in-progress be shown. If the above is acceptable, email me here.
+
+
+// Design philosophy
+// I love insignias that can be rendered in black and one, and still be beautiful. I don't believe beauty is subjective. There is a band of optimal visual complexity in patterns -- it's why the work of Jackson Pollock is so prized.
+// I measure the success of design to be one that reaches an within range of the optimal visual complexity without the use of colors. It should be distinguishable as a shape -- as is all the great brands. 
+// Ultimately I ask myself, is this a symbol I would be proud to have it were my company. If I can honestly say yes, than I will have achieved my highest aspiration as a designer.
+
 var Home = function (_Component) {
   _inherits(Home, _Component);
 
@@ -1122,13 +1143,12 @@ var Home = function (_Component) {
         slidesToShow: 3,
         slidesToScroll: 1
       };
-      // <div className="info-label">{this.state.activeInfoSlide}</div>
 
       return _react2.default.createElement(
         "div",
         { "class": "home-wrapper", __source: {
             fileName: _jsxFileName,
-            lineNumber: 62
+            lineNumber: 72
           },
           __self: this
         },
@@ -1137,13 +1157,13 @@ var Home = function (_Component) {
           {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 63
+              lineNumber: 73
             },
             __self: this
           },
           _react2.default.createElement("meta", { charSet: "utf-8", __source: {
               fileName: _jsxFileName,
-              lineNumber: 64
+              lineNumber: 74
             },
             __self: this
           }),
@@ -1152,7 +1172,7 @@ var Home = function (_Component) {
             {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 65
+                lineNumber: 75
               },
               __self: this
             },
@@ -1160,22 +1180,7 @@ var Home = function (_Component) {
           ),
           _react2.default.createElement("link", { rel: "canonical", href: "https://reednotes.com", __source: {
               fileName: _jsxFileName,
-              lineNumber: 66
-            },
-            __self: this
-          })
-        ),
-        _react2.default.createElement(
-          "div",
-          { "class": "profile-wrapper", __source: {
-              fileName: _jsxFileName,
-              lineNumber: 68
-            },
-            __self: this
-          },
-          _react2.default.createElement("img", { className: "profile-photo", src: _profileCr2.default, __source: {
-              fileName: _jsxFileName,
-              lineNumber: 69
+              lineNumber: 76
             },
             __self: this
           })
@@ -1184,35 +1189,69 @@ var Home = function (_Component) {
           "div",
           { "class": "intro", __source: {
               fileName: _jsxFileName,
-              lineNumber: 71
+              lineNumber: 79
             },
             __self: this
           },
-          "Hi. I'm Dan"
+          "R"
         ),
         _react2.default.createElement(
           "div",
           { "class": "paragraph-intro", __source: {
               fileName: _jsxFileName,
-              lineNumber: 72
+              lineNumber: 80
             },
             __self: this
           },
-          "I'm studying mathematics and physics at the University of British Columbia. Previously I headed a team that develops computer vision technologies in Cambridge, MA. In my spare time I like to jam on my guitar and dig through old philosophy books in search of ancient wisdom. ",
+          "Hi I'm Dan,",
+          _react2.default.createElement("div", { "class": "pbreak", __source: {
+              fileName: _jsxFileName,
+              lineNumber: 82
+            },
+            __self: this
+          }),
+          _react2.default.createElement("div", { "class": "pbreak", __source: {
+              fileName: _jsxFileName,
+              lineNumber: 83
+            },
+            __self: this
+          }),
+          "This is my personal blog. I write about things on my mind, most of which pertain to technology.",
+          _react2.default.createElement("div", { "class": "pbreak", __source: {
+              fileName: _jsxFileName,
+              lineNumber: 85
+            },
+            __self: this
+          }),
+          "I'm a software executive, developer, and designer. I co-founded a computer-vision company and served from 2013-2016; I did some contracting after. I studied Mathematics & Physics at the University of British Columbia. I like to run and play music on my spare time. Currently I reside in Vancouver.",
+          _react2.default.createElement("br", {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 87
+            },
+            __self: this
+          }),
+          _react2.default.createElement("br", {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 88
+            },
+            __self: this
+          }),
           _react2.default.createElement(
             "a",
-            { href: "#", __source: {
+            { "class": "more-link", href: "#", __source: {
                 fileName: _jsxFileName,
-                lineNumber: 73
+                lineNumber: 89
               },
               __self: this
             },
-            "More about me"
+            "More About Me"
           ),
           _react2.default.createElement("br", {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 74
+              lineNumber: 90
             },
             __self: this
           }),
@@ -1220,7 +1259,7 @@ var Home = function (_Component) {
             "span",
             { "class": "bar", __source: {
                 fileName: _jsxFileName,
-                lineNumber: 75
+                lineNumber: 91
               },
               __self: this
             },
@@ -1230,22 +1269,21 @@ var Home = function (_Component) {
             "div",
             { "class": "sub-info", __source: {
                 fileName: _jsxFileName,
-                lineNumber: 76
+                lineNumber: 92
               },
               __self: this
             },
             _react2.default.createElement(
-              "b",
-              {
-                __source: {
+              "span",
+              { "class": "about-site", __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 77
+                  lineNumber: 93
                 },
                 __self: this
               },
               "About This Website"
             ),
-            " ReedNotes is a crawlable React single-page-application (SPA) hosted on a Node server and bundled using Webpack."
+            " Hand-built using React and Node. WordPress, the more sensible choice, came to mind after after much had been built. I apologize if the UX is not where it should be, but it's unlikely new features will be added as I will be busy with other engagements."
           )
         )
       );
@@ -1254,6 +1292,10 @@ var Home = function (_Component) {
 
   return Home;
 }(_react.Component);
+
+// <div class="profile-wrapper">
+//             <img className="profile-photo" src={pic} />
+//         </div>
 
 // <Slider {...settings} class="home-info">
 //   {this.state.infolist && this.state.infolist.map((item,i) => 
@@ -1635,10 +1677,10 @@ exports.residentPerks = residentPerks;
 
 /***/ }),
 
-/***/ "./src/shared/views/info_investor/InfoInvestor.js":
-/*!********************************************************!*\
-  !*** ./src/shared/views/info_investor/InfoInvestor.js ***!
-  \********************************************************/
+/***/ "./src/shared/views/memoir/Memoir.js":
+/*!*******************************************!*\
+  !*** ./src/shared/views/memoir/Memoir.js ***!
+  \*******************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1648,7 +1690,7 @@ exports.residentPerks = residentPerks;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = "/Users/Dan/Projects/reednotes/src/shared/views/info_investor/InfoInvestor.js";
+var _jsxFileName = "/Users/Dan/Projects/reednotes/src/shared/views/memoir/Memoir.js";
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -1662,7 +1704,7 @@ var _reactScroll = __webpack_require__(/*! react-scroll */ "react-scroll");
 
 var _reactScroll2 = _interopRequireDefault(_reactScroll);
 
-__webpack_require__(/*! ./InfoInvestor.styl */ "./src/shared/views/info_investor/InfoInvestor.styl");
+__webpack_require__(/*! ./Memoir.styl */ "./src/shared/views/memoir/Memoir.styl");
 
 var _reactHelmet = __webpack_require__(/*! react-helmet */ "react-helmet");
 
@@ -1674,39 +1716,21 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var ScrollLink = _reactScroll2.default.Link;
-var Events = _reactScroll2.default.Events;
-var scrollSpy = _reactScroll2.default.scrollSpy;
-var Element = _reactScroll2.default.Element;
+var Memoir = function (_Component) {
+  _inherits(Memoir, _Component);
 
-var InfoInvestor = function (_Component) {
-  _inherits(InfoInvestor, _Component);
+  function Memoir() {
+    _classCallCheck(this, Memoir);
 
-  function InfoInvestor() {
-    _classCallCheck(this, InfoInvestor);
-
-    return _possibleConstructorReturn(this, (InfoInvestor.__proto__ || Object.getPrototypeOf(InfoInvestor)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (Memoir.__proto__ || Object.getPrototypeOf(Memoir)).apply(this, arguments));
   }
 
-  _createClass(InfoInvestor, [{
+  _createClass(Memoir, [{
     key: "componentDidMount",
-    value: function componentDidMount() {
-      Events.scrollEvent.register('begin', function (to, element) {
-        console.log("begin", arguments);
-      });
-
-      Events.scrollEvent.register('end', function (to, element) {
-        console.log("end", arguments);
-      });
-
-      scrollSpy.update();
-    }
+    value: function componentDidMount() {}
   }, {
     key: "componentWillUnmount",
-    value: function componentWillUnmount() {
-      Events.scrollEvent.remove('begin');
-      Events.scrollEvent.remove('end');
-    }
+    value: function componentWillUnmount() {}
   }, {
     key: "render",
     value: function render() {
@@ -1715,7 +1739,7 @@ var InfoInvestor = function (_Component) {
         {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 31
+            lineNumber: 14
           },
           __self: this
         },
@@ -1724,13 +1748,13 @@ var InfoInvestor = function (_Component) {
           {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 32
+              lineNumber: 15
             },
             __self: this
           },
           _react2.default.createElement("meta", { charSet: "utf-8", __source: {
               fileName: _jsxFileName,
-              lineNumber: 33
+              lineNumber: 16
             },
             __self: this
           }),
@@ -1739,169 +1763,143 @@ var InfoInvestor = function (_Component) {
             {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 34
+                lineNumber: 17
               },
               __self: this
             },
-            "Investor"
+            "ReedNotes | Memoir"
           ),
-          _react2.default.createElement("link", { rel: "canonical", href: "http://mysite.com/example", __source: {
+          _react2.default.createElement("link", { rel: "canonical", href: "http://reednotes.com/memoir", __source: {
               fileName: _jsxFileName,
-              lineNumber: 35
+              lineNumber: 18
             },
             __self: this
           })
         ),
         _react2.default.createElement(
           "div",
-          {
-            __source: {
+          { "class": "body-content", __source: {
               fileName: _jsxFileName,
-              lineNumber: 37
+              lineNumber: 20
             },
             __self: this
           },
           _react2.default.createElement(
-            ScrollLink,
-            { activeClass: "active", to: "test1", spy: true, smooth: true, offset: 0, duration: 500, onSetActive: this.handleSetActive, __source: {
+            "div",
+            { "class": "timestamp", __source: {
                 fileName: _jsxFileName,
-                lineNumber: 38
+                lineNumber: 21
               },
               __self: this
             },
-            "Test 1"
+            "June 2018"
           ),
           _react2.default.createElement(
-            ScrollLink,
-            { activeClass: "active", to: "test2", spy: true, smooth: true, offset: 0, duration: 500, onSetActive: this.handleSetActive, __source: {
+            "div",
+            { "class": "header", __source: {
                 fileName: _jsxFileName,
-                lineNumber: 41
+                lineNumber: 22
               },
               __self: this
             },
-            "Test 1"
+            "A Memoir of Sorts"
           ),
           _react2.default.createElement(
-            ScrollLink,
-            { activeClass: "active", to: "test3", spy: true, smooth: true, offset: 0, duration: 500, onSetActive: this.handleSetActive, __source: {
+            "div",
+            { "class": "author", __source: {
                 fileName: _jsxFileName,
-                lineNumber: 44
-              },
-              __self: this
-            },
-            "Test 1"
-          ),
-          _react2.default.createElement(
-            ScrollLink,
-            { activeClass: "active", to: "test4", spy: true, smooth: true, offset: 0, duration: 500, onSetActive: this.handleSetActive, __source: {
-                fileName: _jsxFileName,
-                lineNumber: 47
+                lineNumber: 23
               },
               __self: this
             },
             _react2.default.createElement(
-              "div",
-              { className: "testheight", __source: {
+              "span",
+              {
+                __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 48
+                  lineNumber: 23
                 },
                 __self: this
               },
-              "Test 1"
-            )
-          )
-        ),
-        _react2.default.createElement(
-          Element,
-          { name: "test1", className: "element", __source: {
-              fileName: _jsxFileName,
-              lineNumber: 53
-            },
-            __self: this
-          },
+              "by"
+            ),
+            " Daniel M. Reed"
+          ),
           _react2.default.createElement(
-            "div",
-            { className: "testheight", __source: {
+            "p",
+            { "class": "paragraphs", __source: {
                 fileName: _jsxFileName,
-                lineNumber: 54
+                lineNumber: 24
               },
               __self: this
             },
-            "Guy number 1"
-          )
-        ),
-        _react2.default.createElement(
-          Element,
-          { name: "test2", className: "element", __source: {
-              fileName: _jsxFileName,
-              lineNumber: 58
-            },
-            __self: this
-          },
-          _react2.default.createElement(
-            "div",
-            { className: "testheight", __source: {
+            "My family lived near near an oil refinery at one point; mother wasn't fond of that location, though it didn't bother me so much; I kind of liked it rather. This was at the outskirts of San Francisco, the small town of twenty-six thousand people where people knew each other by first names, a town where everyday felt like a sunny afternoon. Mom and dad worked in the wine business, and every so often I got to tag along to Napa Valley or wherever ",
+            "\u2014",
+            " I loved it. Our little two story town house overlooked golden hills that rolled on for miles across the Carquinez Strait ",
+            "\u2014",
+            " the dry warm breeze, the dusty trails, the train that would encircle. At nights by the town dock bespeckled by palm trees, I would sit and quietly gaze at the stars. To this day, these are still among the happinest times in recent memory.",
+            _react2.default.createElement("br", {
+              __source: {
                 fileName: _jsxFileName,
-                lineNumber: 59
+                lineNumber: 26
               },
               __self: this
-            },
-            "Guy number 2"
-          )
-        ),
-        _react2.default.createElement(
-          Element,
-          { name: "test3", className: "element", __source: {
-              fileName: _jsxFileName,
-              lineNumber: 63
-            },
-            __self: this
-          },
-          _react2.default.createElement(
-            "div",
-            { className: "testheight", __source: {
+            }),
+            _react2.default.createElement("br", {
+              __source: {
                 fileName: _jsxFileName,
-                lineNumber: 64
+                lineNumber: 27
               },
               __self: this
-            },
-            "Guy number 3"
-          )
-        ),
-        _react2.default.createElement(
-          Element,
-          { name: "test4", className: "element", __source: {
-              fileName: _jsxFileName,
-              lineNumber: 68
-            },
-            __self: this
-          },
-          _react2.default.createElement(
-            "div",
-            { className: "testheight", __source: {
+            }),
+            "During summers I took every opportunity to slink off to Berkeley. I loved auditing lectures, and this drove the attendance person crazy. It was at Berkeley that I caught a sense of excitement about science and technology that has been with me ever since. By the time I matriculated to university, I had my eye so dead set on Silicon Valley that I didn't end up staying in school for very long. Around junior year, I got antsy, got on a plane to Boston and started software company.",
+            _react2.default.createElement("br", {
+              __source: {
                 fileName: _jsxFileName,
-                lineNumber: 69
+                lineNumber: 29
               },
               __self: this
-            },
-            "Guy number 4"
+            }),
+            _react2.default.createElement("br", {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 30
+              },
+              __self: this
+            }),
+            "This company I started in my early twenties with my dear friend Will and Sergei has been the center-fold of my life thus far. The advent of HTML5 video in 2011 presented an opportunity to link powerful object tracking and identification technology with in-video interaction. We scrambled to get working prototypes and to secure initial interest. Will was at Harvard at the time and got us funded; he was a big source of our early momentum. Admittedly I was very lucky to have had such wonderful partners and to have been in that area. During my stint, I served as Partner, President of Product, and when Will went to Shanghai to set up a distribution arm, CEO. I oversaw the relocation of the head office to Los Angeles, where I served my remaining days. The people with whom I embarked on this journey and have met along the way are much the same people for whom I hold my deerest and warmest affection.",
+            _react2.default.createElement("br", {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 32
+              },
+              __self: this
+            }),
+            _react2.default.createElement("br", {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 33
+              },
+              __self: this
+            }),
+            "At any rate, these are the notes in my melody, the formative years thus far if you will. There have been more follies and missteps along the way than I care to admit, but if given a chance to relive, none I would differently."
           )
         )
       );
     }
   }]);
 
-  return InfoInvestor;
+  return Memoir;
 }(_react.Component);
 
-exports.default = InfoInvestor;
+exports.default = Memoir;
 
 /***/ }),
 
-/***/ "./src/shared/views/info_investor/InfoInvestor.styl":
-/*!**********************************************************!*\
-  !*** ./src/shared/views/info_investor/InfoInvestor.styl ***!
-  \**********************************************************/
+/***/ "./src/shared/views/memoir/Memoir.styl":
+/*!*********************************************!*\
+  !*** ./src/shared/views/memoir/Memoir.styl ***!
+  \*********************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -1909,10 +1907,10 @@ exports.default = InfoInvestor;
 
 /***/ }),
 
-/***/ "./src/shared/views/news/News.js":
-/*!***************************************!*\
-  !*** ./src/shared/views/news/News.js ***!
-  \***************************************/
+/***/ "./src/shared/views/notes/Notes.js":
+/*!*****************************************!*\
+  !*** ./src/shared/views/notes/Notes.js ***!
+  \*****************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1922,7 +1920,7 @@ exports.default = InfoInvestor;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = "/Users/Dan/Projects/reednotes/src/shared/views/news/News.js";
+var _jsxFileName = "/Users/Dan/Projects/reednotes/src/shared/views/notes/Notes.js";
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -1930,9 +1928,9 @@ var _react = __webpack_require__(/*! react */ "react");
 
 var _react2 = _interopRequireDefault(_react);
 
-var _NewsList = __webpack_require__(/*! ./NewsList */ "./src/shared/views/news/NewsList.js");
+var _NotesList = __webpack_require__(/*! ./NotesList */ "./src/shared/views/notes/NotesList.js");
 
-var _NewsList2 = _interopRequireDefault(_NewsList);
+var _NotesList2 = _interopRequireDefault(_NotesList);
 
 __webpack_require__(/*! isomorphic-fetch */ "isomorphic-fetch");
 
@@ -1946,13 +1944,13 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var News = function (_Component) {
-  _inherits(News, _Component);
+var Notes = function (_Component) {
+  _inherits(Notes, _Component);
 
-  function News(props) {
-    _classCallCheck(this, News);
+  function Notes(props) {
+    _classCallCheck(this, Notes);
 
-    var _this = _possibleConstructorReturn(this, (News.__proto__ || Object.getPrototypeOf(News)).call(this, props));
+    var _this = _possibleConstructorReturn(this, (Notes.__proto__ || Object.getPrototypeOf(Notes)).call(this, props));
 
     var initialData = void 0;
     if (props.staticContext) {
@@ -1966,7 +1964,7 @@ var News = function (_Component) {
     return _this;
   }
 
-  _createClass(News, [{
+  _createClass(Notes, [{
     key: "componentDidMount",
     value: function componentDidMount() {
       var _this2 = this;
@@ -2035,7 +2033,7 @@ var News = function (_Component) {
           },
           "This is the news page"
         ),
-        _react2.default.createElement(_NewsList2.default, { news: news, __source: {
+        _react2.default.createElement(_NotesList2.default, { news: news, __source: {
             fileName: _jsxFileName,
             lineNumber: 43
           },
@@ -2054,17 +2052,17 @@ var News = function (_Component) {
     }
   }]);
 
-  return News;
+  return Notes;
 }(_react.Component);
 
-exports.default = News;
+exports.default = Notes;
 
 /***/ }),
 
-/***/ "./src/shared/views/news/NewsList.css":
-/*!********************************************!*\
-  !*** ./src/shared/views/news/NewsList.css ***!
-  \********************************************/
+/***/ "./src/shared/views/notes/NotesList.css":
+/*!**********************************************!*\
+  !*** ./src/shared/views/notes/NotesList.css ***!
+  \**********************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -2072,10 +2070,10 @@ exports.default = News;
 
 /***/ }),
 
-/***/ "./src/shared/views/news/NewsList.js":
-/*!*******************************************!*\
-  !*** ./src/shared/views/news/NewsList.js ***!
-  \*******************************************/
+/***/ "./src/shared/views/notes/NotesList.js":
+/*!*********************************************!*\
+  !*** ./src/shared/views/notes/NotesList.js ***!
+  \*********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2085,7 +2083,7 @@ exports.default = News;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = "/Users/Dan/Projects/reednotes/src/shared/views/news/NewsList.js";
+var _jsxFileName = "/Users/Dan/Projects/reednotes/src/shared/views/notes/NotesList.js";
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -2101,7 +2099,7 @@ var _orderBy = __webpack_require__(/*! lodash/orderBy */ "lodash/orderBy");
 
 var _orderBy2 = _interopRequireDefault(_orderBy);
 
-__webpack_require__(/*! ./NewsList.css */ "./src/shared/views/news/NewsList.css");
+__webpack_require__(/*! ./NotesList.css */ "./src/shared/views/notes/NotesList.css");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -2113,26 +2111,26 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 // import w18 from "./w18.png";
 
 
-var NewsList = function (_Component) {
-  _inherits(NewsList, _Component);
+var NotesList = function (_Component) {
+  _inherits(NotesList, _Component);
 
-  function NewsList() {
+  function NotesList() {
     var _ref;
 
     var _temp, _this, _ret;
 
-    _classCallCheck(this, NewsList);
+    _classCallCheck(this, NotesList);
 
     for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = NewsList.__proto__ || Object.getPrototypeOf(NewsList)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = NotesList.__proto__ || Object.getPrototypeOf(NotesList)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
       sortOrder: "upvotes"
     }, _temp), _possibleConstructorReturn(_this, _ret);
   }
 
-  _createClass(NewsList, [{
+  _createClass(NotesList, [{
     key: "setOrder",
     value: function setOrder(order, event) {
       event.preventDefault();
@@ -2284,10 +2282,10 @@ var NewsList = function (_Component) {
     }
   }]);
 
-  return NewsList;
+  return NotesList;
 }(_react.Component);
 
-exports.default = NewsList;
+exports.default = NotesList;
 
 /***/ }),
 

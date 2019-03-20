@@ -9,6 +9,17 @@ import {investorPerks, residentPerks} from "./InvestorFeatures.js"
 
 import Slider from "react-slick";
 
+// TO ADD: Hire me for design.
+// Please note that I accept clients very sparingly, with the same process of evaluation. My primary criteria is whether I can meaningfully contribute to a vivid and compelling brand that aligns with the service or product. If you wish to engage me, my process is as follows:
+// You will send me a prospectus, no more than page, containing the name and what you wish to convey in the logo and a brief description of the product written for the consumer. You will be asked to pay $795 retainer fee (deducted from the price if we decide to move forward). If I cannot examine your project within the specified time frame, I will refund the fee. Within a week I will respond with whether I wish to move forward. If I do, I will contact you in person or over the phone. Pricing will be determined once the specifications have been made clear.
+// My fees range between $21,999 - $79,999. You will receive one final design, guidelines of use, all original digital copies for modification. I will also confer copyright of the work onto you or your organisation, but retain recognition of authorship. Through out the term of project, only in exceptional cases will work-in-progress be shown. If the above is acceptable, email me here.
+
+
+// Design philosophy
+// I love insignias that can be rendered in black and one, and still be beautiful. I don't believe beauty is subjective. There is a band of optimal visual complexity in patterns -- it's why the work of Jackson Pollock is so prized.
+// I measure the success of design to be one that reaches an within range of the optimal visual complexity without the use of colors. It should be distinguishable as a shape -- as is all the great brands. 
+// Ultimately I ask myself, is this a symbol I would be proud to have it were my company. If I can honestly say yes, than I will have achieved my highest aspiration as a designer.
+
 class Home extends Component {
   constructor(props) {
     super(props);
@@ -56,7 +67,6 @@ class Home extends Component {
       slidesToShow: 3,
       slidesToScroll: 1
     };
-              // <div className="info-label">{this.state.activeInfoSlide}</div>
 
     return (
       <div class="home-wrapper">
@@ -65,16 +75,22 @@ class Home extends Component {
           <title>ReedNotes | Home</title>
           <link rel="canonical" href="https://reednotes.com" />
         </Helmet>
-        <div class="profile-wrapper">
-            <img className="profile-photo" src={pic} />
-        </div>
-        <div class="intro">Hi. I'm Dan</div>
+        
+        <div class="intro">R</div>
         <div class="paragraph-intro">
-            I'm studying mathematics and physics at the University of British Columbia. Previously I headed a team that develops computer vision technologies in Cambridge, MA. In my spare time I like to jam on my guitar and dig through old philosophy books in search of ancient wisdom. <a href="#">More about me</a>
+            Hi I'm Dan,
+            <div class="pbreak"></div>
+            <div class="pbreak"></div>
+            This is my personal blog. I write about things on my mind, most of which pertain to technology. 
+            <div class="pbreak"></div>
+            I'm a software executive, developer, and designer. I co-founded a computer-vision company and served from 2013-2016; I did some contracting after. I studied Mathematics & Physics at the University of British Columbia. I like to run and play music on my spare time. Currently I reside in Vancouver.
+            <br></br>
+            <br></br>
+            <a class="more-link" href="#">More About Me</a>
             <br></br>
             <span class="bar">_______</span>
             <div class="sub-info">
-              <b>About This Website</b> ReedNotes is a crawlable React single-page-application (SPA) hosted on a Node server and bundled using Webpack.
+              <span class="about-site">About This Website</span> Hand-built using React and Node. WordPress, the more sensible choice, came to mind after after much had been built. I apologize if the UX is not where it should be, but it's unlikely new features will be added as I will be busy with other engagements.
             </div>
         </div>
 
@@ -83,6 +99,10 @@ class Home extends Component {
       )
   }
 }
+
+// <div class="profile-wrapper">
+//             <img className="profile-photo" src={pic} />
+//         </div>
 
         // <Slider {...settings} class="home-info">
         //   {this.state.infolist && this.state.infolist.map((item,i) => 

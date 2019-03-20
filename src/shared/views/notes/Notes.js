@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import NewsList from "./NewsList";
+import NotesList from "./NotesList";
 import "isomorphic-fetch";
 import {Helmet} from "react-helmet";
 
-class News extends Component {
+class Notes extends Component {
   constructor(props) {
     super(props);
 
@@ -40,10 +40,10 @@ class News extends Component {
           <link rel="canonical" href="http://mysite.com/example" />
       </Helmet>
       <h2>This is the news page</h2>
-      <NewsList news={news} />
+      <NotesList news={news} />
       </div>
       );
   }
 }
 
-export default News;
+export default Notes;

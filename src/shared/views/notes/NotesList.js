@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import timeAgo from "node-time-ago";
 import orderBy from "lodash/orderBy";
 // import w18 from "./w18.png";
-import "./NewsList.css";
+import "./NotesList.css";
 
-class NewsList extends Component {
+class NotesList extends Component {
   state = {
     sortOrder: "upvotes"
   };
@@ -57,4 +57,4 @@ class NewsList extends Component {
   }
 }
 
-export default NewsList;
+export default NotesList;

@@ -1,7 +1,7 @@
 import Home from "./views/home/Home";
-import News from "./views/news/News";
-import InfoInvestor from "./views/info_investor/InfoInvestor";
-// import InfoOverview from "./views/info_overview/InfoOverview";
+import Notes from "./views/notes/Notes";
+import Memoir from "./views/memoir/Memoir";
+// import ThingsILove from "./views/thingsilove/ThingsILove";
 
 const routes = [
   {
@@ -10,13 +10,18 @@ const routes = [
     exact: true
   },
   {
-    path: "/news",
-    component: News,
+    path: "/notes",
+    component: Notes,
     exact: true
   },
+  // {
+  //   path: "/thingsilove",
+  //   component: ThingsILove,
+  //   exact: true
+  // },
   {
-    path: "/learn/investor",
-    component: InfoInvestor,
+    path: "/memoir",
+    component: Memoir,
     exact: true
   }
 ]

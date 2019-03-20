@@ -1,11 +1,10 @@
 header {
   text-align: left;
   font-weight: 500;
-  font-family: 'graphik lcg web';
-  padding: 4px 0 5px;
-  width: 680px;
+  padding: 4px 0 6px;
+  width: 710px;
   position: fixed;
-  background-color: rgba(0,0,0,0.85);
+  background-color: rgba(0,35,45,0.96);
   bottom: 20px;
   z-index: 3;
   border-radius: 5px;
@@ -19,17 +18,21 @@ header li {
   display: inline-block;
 }
 header li a {
-  padding: 10px 14px;
+  padding: 10px 16px;
   transition: 0.3s;
-  color: #fff;
-  font-size: 0.8em;
+  color: #e7d0ba;
+  text-transform: uppercase;
+  font-size: 0.7em;
+  letter-spacing: 0.14em;
+  font-weight: 600;
+  font-family: "proxima nova";
 }
 header .nav-sig {
   font-size: 1.6em !important;
   color: #000;
   display: inline-block;
   letter-spacing: 0.03em;
-  color: #fff;
+  color: #e7d0ba;
   margin-left: -30px;
   text-align: center;
   margin: 2px 20px 2px 50px;
@@ -137,12 +140,14 @@ header .header-links li.header-login a {
 }.home-wrapper {
   font-size: 1em;
   width: 520px;
-  font-family: 'SF Pro Text';
   font-weight: 400;
   line-height: 1.5em;
+  margin: 40px auto;
 }
 .home-wrapper .bar {
   opacity: 0.3;
+  margin-top: 10px;
+  display: block;
 }
 .home-wrapper .profile-wrapper {
   margin-top: 100px;
@@ -155,18 +160,47 @@ header .header-links li.header-login a {
   margin-right: 25px;
 }
 .home-wrapper .intro {
-  font-size: 26px;
-  margin: 100px 0 20px;
-  color: #000;
-  font-family: 'Myriad Pro';
-  font-weight: 600;
+  font-size: 44px;
+  margin: 100px 0 40px;
+  color: #00545a;
+  font-family: 'Minion Pro';
   padding-bottom: 10px;
+  text-transform: uppercase;
   word-spacing: 0em;
+  font-weight: 600;
   margin-top: 40px;
+  letter-spacing: 0.24em;
+  position: absolute;
+  top: 0;
+  left: 49%;
 }
 .home-wrapper .sub-info {
-  font-size: 14px;
-  margin: 4px 0 100px;
+  font-size: 0.76em;
+  margin: 6px 0 80px;
+  font-family: 'SF Pro Text';
+  color: #000;
+  line-height: 1.6em;
+  opacity: 0.36;
+}
+.home-wrapper .paragraph-intro {
+  color: #2b3446;
+  font-size: 1.1em;
+  line-height: 1.55em;
+  font-family: 'CharterITC';
+}
+.home-wrapper .more-link {
+  font-family: 'Minion Pro';
+  font-style: italic;
+  margin-bottom: 24px;
+  font-size: 1.03em;
+  color: #005f5f;
+}
+.home-wrapper .pbreak {
+  height: 10px;
+}
+.home-wrapper .about-site {
+  font-weight: 500;
+  margin-right: 2px;
 }
 .home-info-title {
   border-top: 1px solid rgba(0,0,0,0.06);
@@ -257,28 +291,93 @@ header .header-links li.header-login a {
   display: block;
   margin-left: 40px;
   margin-top: -12px;
-}.testheight {
-  height: 400px;
+}.body-content {
+  width: 530px;
+  margin: 60px auto 120px;
+}
+.body-content .header {
+  font-size: 28px;
+  margin: 0px 0 30px;
+  background-color: inherit;
+  color: #000;
+  font-family: 'graphik lcg web';
+  font-family: 'Garamond Premier Pro';
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.3em;
+  padding-bottom: 10px;
+  word-spacing: 0em;
+  font-weight: 500;
+}
+.body-content .timestamp,
+.body-content .author {
+  font-family: "minion-pro";
+  font-family: 'Garamond Premier Pro';
+  text-align: center;
+  padding: 4px 0 10px;
+  color: #3c3830;
+  font-size: 1.04em;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  opacity: 0.55;
+}
+.body-content .author {
+  font-weight: 500;
+  font-size: 1.1em;
+  margin-bottom: 60px;
+  opacity: 1;
+}
+.body-content .author span {
+  font-weight: 600;
+  font-style: italic;
+  letter-spacing: 0;
+  word-spacing: 5px;
+  margin-right: 3px;
+  text-transform: none;
+}
+.paragraphs::first-letter {
+  font-size: 380%;
+  font-weight: 600;
+  font-family: "Nocturno Display";
+  font-family: "Adobe Calson Pro";
+  margin-top: 10px;
+  padding-right: 6px;
+  width: 20px;
+  letter-spacing: 0.1em;
+  float: left;
+}
+.paragraphs {
+  font-size: 1.13em;
+  width: 530px;
+  font-family: 'CharterITC';
+  font-weight: 400;
+  line-height: 1.5em;
+  color: #2b3446;
 }.footer {
   font-size: 1.6em;
-  background-color: #ccc;
+  background-color: #efefef;
+  background-color: rgba(0,37,40,0.98);
   height: 220px;
-  padding: 30px;
+  padding: 34px;
   text-align: center;
   color: #677;
+  color: #e7d0ba;
+  border-top: 3px solid #efc579;
 }
 .footer .copyright {
   font-size: 13px;
-  color: #888;
+  color: rgba(231,208,186,0.78);
   font-weight: 400;
   padding-top: 10px;
   font-family: "helvetica neue";
 }
 .footer .copytype {
-  font-size: 12px;
-  color: #888;
+  font-size: 0.48em;
+  color: rgba(231,208,186,0.84);
   font-family: "Myriad Pro";
-  font-weight: 400;
+  font-family: "Minion Pro";
+  font-weight: 500;
+  font-style: italic;
 }
 .footer .footer-sig {
   font-size: 1.14em;
@@ -287,6 +386,7 @@ header .header-links li.header-login a {
 }
 .footer .footer-msg {
   font-family: "Myriad Pro";
+  font-family: "Minion Pro";
   margin-bottom: 10px;
   font-size: 14px;
 }* {
@@ -299,21 +399,24 @@ header .header-links li.header-login a {
 html {
   background-color: #fff;
   padding: 0 0px;
+  margin: 85px 30px 0px;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
 }
 body {
-  background-color: #fff;
+  background-color: #fdf8f4;
   font-size: 16px;
+  max-width: 900px;
+  margin: auto;
+  border-radius: 8px;
   box-sizing: border-box;
   text-rendering: geometricPrecision;
   font-family: "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #1c1e21;
-  background-color: transparent;
 }
 .content {
   margin: auto;

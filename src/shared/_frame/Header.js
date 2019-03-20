@@ -8,11 +8,11 @@ const Header = () => (
     <nav>
         <ul class="navigation">
           <Link to="/"><div class="nav-sig">ReedNotes</div></Link>
-          <li><Link to="/">Memoir</Link></li>
-          <li><Link to="/">Friends</Link></li>
-          <li><Link to="/">Things I Love</Link></li>
-          <li><Link to="/">Notes</Link></li>
-          <li><Link to="/">Design</Link></li>
+          <li><Link to="/notes">Notes</Link></li>
+          <li><Link to="/design">Design</Link></li>
+          <li><Link to="/thingsilove">Things I Love</Link></li>
+          <li><Link to="/friends">Friends</Link></li>
+          <li><Link to="/memoir">Memoir</Link></li>
         </ul>
     </nav>
   </header>
