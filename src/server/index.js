@@ -38,7 +38,7 @@ app.get("*", (req, res, next) => {
   console.log(req.url);
 
   // test each route in routes with match path
-  const activeRoute = routes.find(route => matchPath(req.url, route))
+  const activeRoute = routes.find(route => matchPath(req.path, route))
   console.log("ACTIVE ROUTE:", activeRoute);
 
   const promise = activeRoute.fetchInitialData

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import NotesList from "./NotesList";
+import './Notes.styl';
 import "isomorphic-fetch";
 import {Helmet} from "react-helmet";
 
@@ -15,12 +16,41 @@ class Notes extends Component {
       delete window.__initialData__;
     }
 
-    this.state = { news: initialData };
+    this.state = { 
+      initialData: initialData,
+      notes: initialData 
+    };
   }
-
+  componentWillReceiveProps(newProps) {
+    console.log("called")
+    console.log(newProps)
+    if (newProps.match.params.topic) {
+      console.log("specific")
+      let topic = newProps.match.params.topic;
+      let results = this.state.initialData.filter(article => article.topics.includes(topic))
+      this.setState({ notes: results })
+    } else {
+      console.log("general")
+      this.setState({ notes: this.state.initialData })
+    }
+  }
   componentDidMount() {
-    if (!this.state.news) {
-      News.requestInitialData().then(data => this.setState({ news: data }));
+    if (!this.state.notes) {
+      Notes
+        .requestInitialData()
+        .then((data) => {
+          console.log(data)
+          this.setState({ initialData : data });
+          let params = this.props.match.params
+          if ( params && params.topic ) {
+            let topic = this.props.match.params.topic;
+            let results = data.filter(article => article.topics.includes(topic))
+            this.setState({ notes: results })
+          } else {
+            this.setState({ notes: data })
+          }
+          
+        });
     }
   }
 
@@ -31,19 +61,33 @@ class Notes extends Component {
   }
 
   render() {
-    const { news } = this.state;
+    const { notes } = this.state;
     return (
       <div>
       <Helmet>
           <meta charSet="utf-8" />
-          <title>News</title>
-          <link rel="canonical" href="http://mysite.com/example" />
+          <title>Notes</title>
+          <link rel="canonical" href="http://reednotes.com/notes" />
       </Helmet>
-      <h2>This is the news page</h2>
-      <NotesList news={news} />
+
+      <div className="notes-list">
+        <NotesList 
+          news={notes} 
+          />
+      </div>
       </div>
       );
   }
 }
+
+      // <div className="topic-list">
+      //   <div className="topic-header">BROWSE</div>
+      //   <div className="topic-item active">All</div>
+      //   <div className="topic-item">Software</div>
+      //   <div className="topic-item">Startups</div>
+      //   <div className="topic-item">Management</div>
+      //   <div className="topic-item">Physics</div>
+      //   <div className="topic-item">Other</div>
+      // </div>
 
 export default Notes;

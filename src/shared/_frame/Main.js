@@ -1,13 +1,20 @@
-import React from "react";
+import React, {Component} from "react";
 import {Switch,Route} from "react-router-dom"
 import routes from "./../routes";
 
-const Main = () => (
-  <main class="content">
-   <Switch>
-      {routes.map((route, i) => <Route key={i} {...route} />)}
-    </Switch>
-  </main>
-)
+class Main extends Component {
+  componentDidMount() {
+    // this.setState
+  }
+  render() {
+    return (
+      <main className="content">
+       <Switch>
+          {routes.map((route, i) => <Route key={i} {...route} />)}
+        </Switch>
+      </main>
+    )
+  }
+}
 
 export default Main

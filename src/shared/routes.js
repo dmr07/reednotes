@@ -1,7 +1,6 @@
 import Home from "./views/home/Home";
 import Notes from "./views/notes/Notes";
 import Memoir from "./views/memoir/Memoir";
-// import ThingsILove from "./views/thingsilove/ThingsILove";
 
 const routes = [
   {
@@ -10,13 +9,13 @@ const routes = [
     exact: true
   },
   {
-    path: "/notes",
+    path: "/notes/:topic?", // ? says optional so /notes works.
     component: Notes,
-    exact: true
+    // exact: true // turn this off when you use params. otherwise match won't work.
   },
   // {
-  //   path: "/thingsilove",
-  //   component: ThingsILove,
+  //   path: "/projects",
+  //   component: Projects,
   //   exact: true
   // },
   {

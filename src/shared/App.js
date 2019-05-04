@@ -9,14 +9,32 @@ import Footer from "./_frame/Footer"
 // import logo from "./logo.svg";
 import "./_frame/Main.styl";
 
-const App = () => {
-  return (
+const App = () => (
+  // constructor(props) {
+  //   super(props);
+
+  //   this.state = { 
+  //     activeNote: "" 
+  //   };
+  // }
+  // activenotes
+  // updateNotesPage(params) {
+  //   this.setState({
+  //     activeNote: params
+  //   })
+  // }
+  // componentDidMount() {}
+  // render() {
+    // return (
     <div>
        <Header />
        <Main />
        <Footer />
      </div>
-    )
-}
+)
+  // }
+// }
+       // <Header callback={this.updateNotesPage.bind(this)}/>
+       // <Main data={this.state.activeNote}/>
 
 export default App;

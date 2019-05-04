@@ -5,9 +5,7 @@ import {Helmet} from "react-helmet";
 import {Grid, Row, Col} from "react-bootstrap"
 import pic from "../../../client/media/profile-cr.jpg"
 import "./Home.styl";
-import {investorPerks, residentPerks} from "./InvestorFeatures.js"
 
-import Slider from "react-slick";
 
 // TO ADD: Hire me for design.
 // Please note that I accept clients very sparingly, with the same process of evaluation. My primary criteria is whether I can meaningfully contribute to a vivid and compelling brand that aligns with the service or product. If you wish to engage me, my process is as follows:
@@ -24,35 +22,10 @@ class Home extends Component {
   constructor(props) {
     super(props);
     console.log("constructing home");
-    this.state = {
-      activeInfoSlide : "Investor",
-      infolist : investorPerks
-    }
-
-    this.handleChangePerks = this.handleChangePerks.bind(this);
   }
 
   componentDidMount() {
     console.log('mounted');
-  }
-
-  handleChangePerks() {
-    console.log("click heard");
-    if (this.state.activeInfoSlide === "Investor") {
-      // this.state.infolist = homebuyerPerks;
-      // this.state.activeInfoSlide = "Homebuyer";
-      this.setState({
-        activeInfoSlide: "Resident", 
-        infolist: residentPerks
-      })
-    } else {
-      // this.state.infolist = investorPerks;
-      // this.state.activeInfoSlide = "Investor";
-      this.setState({
-        activeInfoSlide: "Investor", 
-        infolist: investorPerks
-      })
-    }
   }
 
   render() {
@@ -69,42 +42,38 @@ class Home extends Component {
     };
 
     return (
-      <div class="home-wrapper">
+      <div className="home-wrapper">
         <Helmet>
           <meta charSet="utf-8" />
           <title>ReedNotes | Home</title>
           <link rel="canonical" href="https://reednotes.com" />
         </Helmet>
         
-        <div class="intro">R</div>
-        <div class="paragraph-intro">
+        <div className="profile-wrapper">
+            <img className="profile-photo" src={pic} />
+        </div>
+        <div className="paragraph-intro">
             Hi I'm Dan,
-            <div class="pbreak"></div>
-            <div class="pbreak"></div>
-            This is my personal blog. I write about things on my mind, most of which pertain to technology. 
-            <div class="pbreak"></div>
-            I'm a software executive, developer, and designer. I co-founded a computer-vision company and served from 2013-2016; I did some contracting after. I studied Mathematics & Physics at the University of British Columbia. I like to run and play music on my spare time. Currently I reside in Vancouver.
+            <div className="pbreak"></div>
+            <div className="pbreak"></div>
+            This is my <a className="more-link" href="#">personal</a> blog, where I share the things I'm learning and things I'm thinking about. Feel free to email me, I have a standing invitation.
+            <div className="pbreak"></div>
+            I used to be a software exec in Los Angeles / Boston. These days I'm in Vancouver. I develop occasionally, mostly in tinkering with neural nets. I did my undergrad in math & physics at UBC. 
             <br></br>
-            <br></br>
-            <a class="more-link" href="#">More About Me</a>
-            <br></br>
-            <span class="bar">_______</span>
-            <div class="sub-info">
-              <span class="about-site">About This Website</span> Hand-built using React and Node. WordPress, the more sensible choice, came to mind after after much had been built. I apologize if the UX is not where it should be, but it's unlikely new features will be added as I will be busy with other engagements.
+            <span className="bar">_______</span>
+            <div className="sub-info">
+              <span className="about-site">About This Website</span> Hand-built using React and Node. WordPress would have been the more sensible choice, came to mind after after much had been built. 
             </div>
         </div>
-
-
       </div>
       )
   }
 }
 
-// <div class="profile-wrapper">
-//             <img className="profile-photo" src={pic} />
-//         </div>
+        // <div className="intro">R</div>
 
-        // <Slider {...settings} class="home-info">
+
+        // <Slider {...settings} className="home-info">
         //   {this.state.infolist && this.state.infolist.map((item,i) => 
         //     <div className="info-col" key={i}>
         //       <h3>{item.title}</h3>
@@ -113,4 +82,7 @@ class Home extends Component {
         //   )}
         // </Slider>
 
+            // <br></br>
+            // <br></br>
+            // I love beautiful things ~ beautiful designs, theorems, music. Left unchecked, to say they are a compulsion is a gross understatement.
 export default Home;

@@ -8,19 +8,22 @@ const api_properties = (app) => {
         id: 1,
         upvotes: 257,
         title: "Something",
-        author: "Guy1"
+        author: "Guy1",
+        topics:['software']
       },
       {
         id: 3,
         upvotes: 227,
         title: "Else",
-        author: "Guy2"
+        author: "Guy2",
+        topics:['software', 'startups']
       },
       {
         id: 2,
         upvotes: 127,
         title: "Mo",
-        author: "Guy3"
+        author: "Guy3",
+        topics:['startups']
       }
       ])
   })
