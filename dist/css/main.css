@@ -2,7 +2,7 @@ header {
   text-align: left;
   font-weight: 500;
   padding: 0px 0px 0px 0px;
-  width: 200px;
+  width: 180px;
   z-index: 3;
   border-radius: 5px;
   vertical-align: top;
@@ -16,21 +16,20 @@ header ul {
   padding: 0;
 }
 header li {
-  padding: 6px 10px;
+  padding: 6px 0px;
   border-top: 1px solid #eee;
 }
 header li a {
-  padding: 10px 16px;
   transition: 0.3s;
-  padding: 12px 20px;
+  padding: 12px 10px;
   transition: 0.3s;
   color: #333;
   display: block;
 /* text-transform: uppercase; */
-  font-size: 0.8em;
+  font-size: 0.96em;
   letter-spacing: 0.02em;
-  font-weight: 600;
-  font-family: "open sans";
+  font-weight: 500;
+  font-family: "marat sans";
 }
 header .nav-sig {
   font-size: 1.89em !important;
@@ -50,11 +49,12 @@ header .header-logo-text {
   font-size: 16px;
 }
 .topic-header {
-  font-size: 0.8em;
-  font-weight: 600;
-  font-family: "open sans";
+  font-size: 0.9em;
+/* font-weight: 600; */
+  font-family: "marat sans";
   color: #ccc;
   margin-bottom: 8px;
+  letter-spacing: 0.28em;
   text-align: center;
   padding: 20px 20px 0px;
 }
@@ -65,9 +65,10 @@ header .header-logo-text {
 .topic-list .active,
 .topic-list .topic-item {
   border-radius: 6px;
-  font-family: "myriad pro";
-  font-size: 0.94em;
-  padding: 10px 14px 8px 40px;
+  font-family: "marat sans";
+  font-size: 0.96em;
+  color: #333;
+  padding: 10px 14px 8px 30px;
 }.home-poster .poster-label {
   font-weight: 600;
   text-transform: uppercase;
@@ -83,7 +84,7 @@ header .header-logo-text {
   width: 450px;
 }
 .home-poster .poster-readmore {
-  color: #f2a500 !important;
+  color: #218799 !important;
   font-weight: 600;
   font-size: 13px;
 }
@@ -155,16 +156,16 @@ header .header-logo-text {
   margin: 40px auto;
 }
 .home-wrapper .profile-wrapper {
+  position: absolute;
   display: inline-block;
-  margin-left: -20px;
   vertical-align: top;
+  top: 0;
+  right: 0;
 }
 .home-wrapper .profile-photo {
-  width: 140px;
-  height: 140px;
-  border-radius: 6px;
-  margin-bottom: 10px;
-  margin-right: 30px;
+  width: 160px;
+  height: 160px;
+  border-bottom-left-radius: 84px;
 }
 .home-wrapper .bar {
   opacity: 0.3;
@@ -186,10 +187,12 @@ header .header-logo-text {
   left: 49%;
 }
 .home-wrapper .sub-info {
-  font-size: 0.9em;
+  font-size: 0.84em;
   margin: 6px 0 80px;
+  font-family: 'Myriad Pro';
   color: #7b776b;
-  line-height: 1.6em;
+  color: rgba(0,0,0,0.33);
+  line-height: 1.4em;
   opacity: 0.85;
 }
 .home-wrapper .paragraph-intro {
@@ -200,6 +203,7 @@ header .header-logo-text {
   line-height: 1.8em;
   width: 350px;
   display: inline-block;
+  font-family: 'CharterITC';
 }
 .home-wrapper .more-link {
   margin-bottom: 24px;
@@ -255,14 +259,11 @@ header .header-logo-text {
   font-size: 10px;
   font-weight: 700;
   color: #606770;
-}.newslist {
-  background-color: #f6f6ef;
-}
-.newslist small {
+}.newslist small {
   color: #828282;
 }
 .header {
-  background-color: #6b32e1;
+  background-color: #fff;
   color: #fff;
   padding: 3px;
   height: 28px;
@@ -293,9 +294,6 @@ header .header-logo-text {
   border: 1px #fff solid;
   vertical-align: bottom;
 }
-.news-item {
-  padding: 0 15px;
-}
 .news-position {
   color: #828282;
 }
@@ -305,8 +303,74 @@ header .header-logo-text {
   margin-top: -12px;
 }.notes-list {
   display: block;
-  width: 400px;
-  height: 800px;
+}
+.liabilityDisclaimer {
+  font-size: 0.82em;
+  color: rgba(0,0,0,0.33);
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 30px;
+}
+.liabilityDisclaimer span {
+  display: inline-block;
+}
+.note-title {
+  font-size: 28px;
+  margin: 0px 0 20px;
+  background-color: inherit;
+  color: #111;
+  display: inline-block;
+  color: rgba(0,0,0,0.84);
+  font-family: 'graphik lcg web';
+  font-family: 'Garamond Premier Pro';
+  font-family: 'Noe Display';
+  text-align: left;
+  padding-bottom: 10px;
+  word-spacing: 0em;
+  font-weight: 500;
+}
+.note-topic {
+  background-color: #d7efee !important;
+  font-family: "Marat Sans";
+  display: inline-block;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.74em;
+  letter-spacing: 0.03em;
+  color: rgba(0,0,0,0.7);
+  padding: 2px 5px 0px;
+  vertical-align: top;
+  margin-left: 8px;
+}
+.note-body {
+  font-size: 1em;
+  font-family: 'Adobe Caslon Pro';
+  font-family: 'CharterITC';
+  font-weight: 500;
+  color: #3c3c3c;
+  color: rgba(0,0,0,0.76) !important;
+  padding-bottom: 40px;
+}
+.note-body p {
+  line-height: 1.6em;
+}
+.note-timestamp {
+  font-family: 'Marat Sans';
+  text-align: left;
+  padding: 4px 0 0px;
+  color: #3c3830;
+  font-size: 0.86em;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  opacity: 0.55;
+  margin-bottom: 10px;
+}
+.note-divider {
+  width: calc(100% + 100px);
+  margin-left: -20px;
+  height: 1px;
+  background: #f6f9fa;
+  margin-bottom: 40px;
 }.body-content {
   margin: 30px auto 120px;
 }
@@ -370,44 +434,42 @@ header .header-logo-text {
   color: #2b3446;
 }.footer {
   font-size: 1.6em;
-  background-color: #efefef;
-  background-color: rgba(0,37,40,0.98);
-  background-color: #fff;
-  background-color: #111;
-  border-top: 1px solid;
-  height: 180px;
-  padding: 34px;
+  height: 240px;
+  padding-top: 80px;
   text-align: center;
   color: #677;
   color: #e7d0ba;
+  color: #218799;
 }
 .footer .copyright {
   font-size: 13px;
   color: #e7d0ba;
   color: #e7d0ba;
+  color: #218799;
   font-weight: 400;
   padding-top: 10px;
   font-family: "helvetica neue";
 }
 .footer .copytype {
-  font-size: 0.48em;
+  font-size: 0.4em;
   color: #e7d0ba;
   color: #e7d0ba;
+  color: #218799;
   font-family: "Myriad Pro";
-  font-family: "Minion Pro";
+  font-family: "Chapaza";
   font-weight: 500;
-  font-style: italic;
+/* font-style: italic; */
 }
 .footer .footer-sig {
-  font-size: 1.14em;
+  font-size: 1.2em;
   font-family: 'Autograf PERSONAL USE ONLY';
   margin-bottom: -10px;
 }
 .footer .footer-msg {
   font-family: "Myriad Pro";
-  font-family: "Minion Pro";
-  margin-bottom: 10px;
-  font-size: 14px;
+  font-family: "Chapaza";
+  margin-bottom: 6px;
+  font-size: 0.45em;
 }* {
   box-sizing: border-box;
 }
@@ -439,12 +501,12 @@ body {
   margin: auto;
   padding: 40px 80px;
   width: 640px;
-  margin-left: 200px;
+  margin-left: 180px;
   max-width: 960px;
-  border-radius: 6px;
   display: inline-block;
   background: #fff;
   border-left: 1px solid #eee;
+  position: relative;
 }
 h1,
 h2,
@@ -469,7 +531,7 @@ fon
 }
 a:hover {
   text-decoration: none;
-  color: #f2a500;
+  color: #218799;
 }
 ul {
   list-style: none;

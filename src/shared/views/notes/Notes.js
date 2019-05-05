@@ -69,7 +69,12 @@ class Notes extends Component {
           <title>Notes</title>
           <link rel="canonical" href="http://reednotes.com/notes" />
       </Helmet>
-
+      <div className="liabilityDisclaimer">
+        <span>
+        Disclaimer: 
+        Views and opinions expressed on this website are my own. No representations or warrantees of any kind, expressed or implied is provided for the information herein. Any reliance you place is strictly at your own risk. 
+        </span>
+      </div>
       <div className="notes-list">
         <NotesList 
           news={notes} 

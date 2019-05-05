@@ -495,20 +495,26 @@ var api_properties = function api_properties(app) {
     res.json([{
       id: 1,
       upvotes: 257,
-      title: "Something",
-      author: "Guy1",
+      title: "Sales is King",
+      body: "<p>Sales the guy that carries everything else. High order bid is is the company getting hitting market share trajectory. This is the most unforgiving metric. They get this right, it’s more than half the battle and they can afford to be idiots in lots of other places. <br> If the sales figures are going strong, the company can get smart and restructure… assuming competent management (obvious look up execs, I generally look at how they answer interview questions; vagueness or use of allegory is a sign of incompetence)<br>Basically seek out the noise. Generally the news that’s circulating the internet is what’s inflating or deflating the stock. Most analysts are morons. When it comes down to it, quarterly will shut up the nay-sayers that depress the stock price. <br>Obviously if you’re reading this, leave shorting to the pros. main reasons: limited upside, infinite downside. Lack of timing certainty can bleed you dry if you’re not careful. In a probabilistic market, the math just doesn’t make sense in 99% of cases.</p>",
+      author: "Daniel Reed",
+      date: "June 20, 2018",
       topics: ['software']
     }, {
       id: 3,
       upvotes: 227,
-      title: "Else",
-      author: "Guy2",
+      title: "The Discomfort of Scaling",
+      body: "<p>When I first had to make hires and hand over responsibilities, it was an unsettling feeling of losing too much control. This was especially felt when I needed to double the size of the team. \n \tI remember a friend retelling his experience in the army reserves. In a training exercise, an attack on his position, guys in his regiment were kept up for several nights in a row. He went out near the bushes to relieve himself, and all of a sudden gunshots started going off left right and center. Without putting his thing back into his trousers, he rushed to his post all the with it hanging out and his pants half way down his butt straight to grab his rifle and man his station. \n \t Sometimes you don’t always have time to get my ducks in a row and get comfortable under highly competitive, fast moving environments. you just have to start running.</p>",
+      author: "Daniel Reed",
+      date: "November 7, 2018",
       topics: ['software', 'startups']
     }, {
       id: 2,
       upvotes: 127,
-      title: "Mo",
+      title: "Meetings",
       author: "Guy3",
+      body: "<p>Always have an agenda. Meandering meetings annoy everyone. Keep an internal clock in your head. If people are stuck on something for too long, and it’s only meant to be an update meeting, put a pin in it and schedule to come back. \n Drawn out meetings will annoy the crap out of really good engineers. Goal is to update everyone’s progress, resolve dependencies - a place where guy X needs guy Y to finish something but never gets around to talking to guy Y, so it just gets shelved.</p>",
+      date: "February 14, 2019",
       topics: ['startups']
     }]);
   });
@@ -2078,9 +2084,29 @@ var Notes = function (_Component) {
         ),
         _react2.default.createElement(
           "div",
+          { className: "liabilityDisclaimer", __source: {
+              fileName: _jsxFileName,
+              lineNumber: 72
+            },
+            __self: this
+          },
+          _react2.default.createElement(
+            "span",
+            {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 73
+              },
+              __self: this
+            },
+            "Disclaimer: Views and opinions expressed on this website are my own. No representations or warrantees of any kind, expressed or implied is provided for the information herein. Any reliance you place is strictly at your own risk."
+          )
+        ),
+        _react2.default.createElement(
+          "div",
           { className: "notes-list", __source: {
               fileName: _jsxFileName,
-              lineNumber: 73
+              lineNumber: 78
             },
             __self: this
           },
@@ -2088,7 +2114,7 @@ var Notes = function (_Component) {
             news: notes,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 74
+              lineNumber: 79
             },
             __self: this
           })
@@ -2134,17 +2160,6 @@ exports.default = Notes;
 
 /***/ }),
 
-/***/ "./src/shared/views/notes/NotesList.css":
-/*!**********************************************!*\
-  !*** ./src/shared/views/notes/NotesList.css ***!
-  \**********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
 /***/ "./src/shared/views/notes/NotesList.js":
 /*!*********************************************!*\
   !*** ./src/shared/views/notes/NotesList.js ***!
@@ -2174,7 +2189,7 @@ var _orderBy = __webpack_require__(/*! lodash/orderBy */ "lodash/orderBy");
 
 var _orderBy2 = _interopRequireDefault(_orderBy);
 
-__webpack_require__(/*! ./NotesList.css */ "./src/shared/views/notes/NotesList.css");
+__webpack_require__(/*! ./NotesList.styl */ "./src/shared/views/notes/NotesList.styl");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -2226,131 +2241,57 @@ var NotesList = function (_Component) {
           },
           __self: this
         },
-        _react2.default.createElement(
-          "div",
-          { className: "header", __source: {
-              fileName: _jsxFileName,
-              lineNumber: 22
-            },
-            __self: this
-          },
-          _react2.default.createElement(
-            "div",
-            { className: "header-title", __source: {
-                fileName: _jsxFileName,
-                lineNumber: 23
-              },
-              __self: this
-            },
-            _react2.default.createElement(
-              "strong",
-              {
-                __source: {
-                  fileName: _jsxFileName,
-                  lineNumber: 24
-                },
-                __self: this
-              },
-              "Wizard News"
-            )
-          ),
-          _react2.default.createElement(
-            "div",
-            { className: "sort", __source: {
-                fileName: _jsxFileName,
-                lineNumber: 26
-              },
-              __self: this
-            },
-            "Sort By:",
-            " ",
-            _react2.default.createElement(
-              "a",
-              {
-                href: "#",
-                className: this.state.sortOrder === "upvotes" && "sort-selected" ? "woo" : "fud",
-                onClick: this.setOrder.bind(this, "upvotes"), __source: {
-                  fileName: _jsxFileName,
-                  lineNumber: 28
-                },
-                __self: this
-              },
-              "Upvotes"
-            ),
-            "|",
-            _react2.default.createElement(
-              "a",
-              {
-                href: "#",
-                className: this.state.sortOrder === "date" && "sort-selected" ? "woo" : "fud",
-                onClick: this.setOrder.bind(this, "date"), __source: {
-                  fileName: _jsxFileName,
-                  lineNumber: 34
-                },
-                __self: this
-              },
-              "Date"
-            )
-          )
-        ),
         news && news.map(function (post) {
           return _react2.default.createElement(
             "div",
             { key: post.id, className: "news-item", __source: {
                 fileName: _jsxFileName,
-                lineNumber: 45
+                lineNumber: 25
               },
               __self: _this2
             },
             _react2.default.createElement(
-              "p",
-              {
-                __source: {
+              "div",
+              { className: "note-title", __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 46
+                  lineNumber: 26
                 },
                 __self: _this2
               },
-              _react2.default.createElement(
-                "span",
-                { className: "news-position", __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 47
-                  },
-                  __self: _this2
-                },
-                post.id,
-                ". \u25B2"
-              ),
-              " ",
-              post.title,
-              " ",
-              _react2.default.createElement(
-                "small",
-                {
-                  __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 48
-                  },
-                  __self: _this2
-                },
-                "(by ",
-                post.author,
-                ")"
-              )
+              post.title
             ),
             _react2.default.createElement(
-              "small",
-              { className: "news-details", __source: {
+              "div",
+              { className: "note-topic", __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 50
+                  lineNumber: 27
                 },
                 __self: _this2
               },
-              post.upvotes,
-              " upvotes | ",
-              (0, _nodeTimeAgo2.default)(post.date)
-            )
+              post.topics[0]
+            ),
+            _react2.default.createElement(
+              "div",
+              { className: "note-timestamp", __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 28
+                },
+                __self: _this2
+              },
+              post.date
+            ),
+            _react2.default.createElement("div", { className: "note-body", dangerouslySetInnerHTML: { __html: post.body }, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 29
+              },
+              __self: _this2
+            }),
+            _react2.default.createElement("div", { className: "note-divider", __source: {
+                fileName: _jsxFileName,
+                lineNumber: 30
+              },
+              __self: _this2
+            })
           );
         })
       );
@@ -2360,7 +2301,40 @@ var NotesList = function (_Component) {
   return NotesList;
 }(_react.Component);
 
+// <span className="news-position">{post.id}. ▲</span> {post.title}{" "}
+// <div className="header">
+// <div className="header-title">
+// <strong>Wizard News</strong>
+// </div>
+// <div className="sort">
+// Sort By:{" "}
+// <a
+// href="#"
+// className={(this.state.sortOrder === "upvotes" && "sort-selected") ? "woo" : "fud"}
+// onClick={this.setOrder.bind(this, "upvotes")}>
+// Upvotes
+// </a>|
+// <a
+// href="#"
+// className={(this.state.sortOrder === "date" && "sort-selected") ? "woo" : "fud"}
+// onClick={this.setOrder.bind(this, "date")}>
+// Date
+// </a>
+// </div>
+// </div>
+
 exports.default = NotesList;
+
+/***/ }),
+
+/***/ "./src/shared/views/notes/NotesList.styl":
+/*!***********************************************!*\
+  !*** ./src/shared/views/notes/NotesList.styl ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 
