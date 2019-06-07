@@ -53,16 +53,18 @@ class Home extends Component {
             <img className="profile-photo" src={pic} />
         </div>
         <div className="paragraph-intro">
-            Hi I'm Dan,
+            <span className="hello">Hi I'm Dan &#128075;</span>
             <div className="pbreak"></div>
             <div className="pbreak"></div>
             This is my <a className="more-link" href="#">personal</a> blog, where I share the things I'm learning and things I'm thinking about. Feel free to email me, I have a standing invitation.
             <div className="pbreak"></div>
-            I used to be a software exec in Los Angeles / Boston. These days I'm in Vancouver. I develop occasionally, mostly in tinkering with neural nets. I did my undergrad in math & physics at UBC. 
+            I used to be a software exec in Los Angeles / Boston. These days I'm in Vancouver. I develop occasionally, mostly tinkering with neural nets. I double majored mathematics & physics at UBC. 
             <br></br>
             <span className="bar">_______</span>
             <div className="sub-info">
-              <span className="about-site">About This Website</span> Hand-built using React and Node. WordPress would have been the more sensible choice, came to mind after after much had been built. 
+              <span className="about-site">About This Website</span>
+              <br></br>
+              Custom single-page-app (SPA) built using React and various of packages, served using Node and Webpack (primarily for SEO purposes), and hosted with Google's Firebase. For IP reasons the source code for this website remains private.
             </div>
         </div>
       </div>

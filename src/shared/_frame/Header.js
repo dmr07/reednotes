@@ -9,10 +9,10 @@ const Header = () => (
         <nav>
             <ul className="navigation">
               <div className="topic-header">BROWSE</div>
-              <li><Link to="/notes">Writings</Link></li>
+              <li><Link to="/notes">Notes</Link></li>
                 <div className="topic-list">
                   <Link to="/notes/software">
-                    <div className="topic-item">Software</div>
+                    <div className="topic-item active">Software</div>
                   </Link>
                   <div className="topic-item">Startups</div>
                   <div className="topic-item">Design</div>

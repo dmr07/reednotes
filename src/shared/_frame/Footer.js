@@ -7,7 +7,7 @@ const Footer = () => (
   <footer>
     <div className="footer">
       <div className="footer-msg">{'\u2014'}&nbsp; Designed and Built by &nbsp;{'\u2014'}</div>
-      <div className="footer-sig">Daniel M. Reed</div>
+      <div className="footer-sig">Daniel Reed</div>
       <span className="copyright">{'\u00A9'}</span><span className="copytype"> 2019 Daniel Reed &nbsp; | &nbsp; All Rights Reserved</span>
     </div>
   </footer>

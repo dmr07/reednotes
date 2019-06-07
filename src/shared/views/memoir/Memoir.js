@@ -20,7 +20,7 @@ class Memoir extends Component {
         </Helmet>
         <div className="body-content">
           <div className="timestamp">June 2018</div>
-          <div className="header">A Brief Memoir of Sorts</div>
+          <div className="header">My Formative Years</div>
           <p className="paragraphs">
             At one point my parents and I lived near an oil refinery. Mother wasn't so fond of that fact, it never didn't bothered me as much; the place quickly grew on me. This was at the outskirts of San Francisco, a charming little town of twenty-six thousand residents, a place where you knew the regulars on a first-name basis, and where everyday felt like a sunny afternoon. Back then mom and dad worked in the wine business, and every so often I got to tag along to Napa Valley or wherever {'\u2014'} I cherished every moment. 
             <br></br>
@@ -34,10 +34,10 @@ class Memoir extends Component {
             This little project I worked on in my early twenties with my dear friends Will and Sergei has been the center-fold of my life thus far. The advent of HTML5 video in 2011 brought about an opportunity to link powerful object tracking and identification technology with in-video interaction. We scrambled to get working prototypes and to secure initial interest. Will was at Harvard at the time and got us funded; he was a big source of our early momentum. Admittedly I was very lucky to have had such wonderful partners and to have been in that area. 
             <br></br>
             <br></br>
-            During my stint, I served as Partner, President of Product, and when Will went to Shanghai to set up a distribution arm, CEO. It was not easy to run a company in my early twenties. Even on my very last day, I could not then say I had fully adjusted {'\u2014'} it was an unsteady experience plagued with crippling self-doubt, inadequacy, and perpetual anxiety. It a period where I made more mistakes than I thought humanly possible. But in in end, as anyone will tell you, going after what you would defend to your last breath is worth every tear drop. Coincidentally, it is an astoundingly good metric for picking things to work on.
+            During my stint, I served as Partner, President of Product, and when Will went to Shanghai to set up a distribution arm, CEO. It was not easy to run a company in my early twenties. Even on my very last day, I could not then say I had fully adjusted {'\u2014'} it was an unsteady experience plagued with crippling self-doubt, inadequacy, and perpetual anxiety. It was also a period where I made more mistakes than I thought humanly possible. These events are ever imprinted in my mind, and as visceral and poignant as any day I recollect. The venture ultimately proved too much of an R&D project to be sustainable, but the technology we developed early on lives on in China as VideoJJ. 
             <br></br>
             <br></br>
-            As years pass, events in the rear-view mirror have only become more blury until they've gone entirely out of view. The difficulty is in reconciling just how finite things are. It sometimes helps to stop and look back. It helps to remember why I do what I do every day.
+            The difficulty is in reconciling just how ephemeral and finite things are -- in technology, in life. It is occasionally comforting to stop and look back, to reminisce, even though it is not the most productive thing in the world. To see a younger self, the asperiations he once held, and after many years, they still hold true to some sense. 
           </p>
         </div>
       </div>
@@ -47,5 +47,5 @@ class Memoir extends Component {
 
 // I dearly miss working with my team, and to have worked on a technology that scarcely existed at the time, 
 //              end, I'm grateful to say I was part of the team that ushered in a few truly innovative products that scarcely existed at the time, and pulling the company out of a year-long nose-dive that nearly ended in our demise. Still, I dearly miss work with the friends with whom I embarked on this adventure and have met along the way.
-
+// As years pass, the rear-view mirror only become more blury until things go entirely out of view. Undoubtedly the shapes we do see we decide the brush strokes to color in our own memories, even in this -- to give things meaning. 
 export default Memoir;

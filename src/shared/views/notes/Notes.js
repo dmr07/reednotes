@@ -70,9 +70,9 @@ class Notes extends Component {
           <link rel="canonical" href="http://reednotes.com/notes" />
       </Helmet>
       <div className="liabilityDisclaimer">
+        <div className="limitations">Limitations of Warrantees</div>
         <span>
-        Disclaimer: 
-        Views and opinions expressed on this website are my own. No representations or warrantees of any kind, expressed or implied is provided for the information herein. Any reliance you place is strictly at your own risk. 
+        No representations or warrantees of any kind, expressed or implied is provided for the information contained on this website, nor shall it be construed as legal advice or relied upon as such.
         </span>
       </div>
       <div className="notes-list">

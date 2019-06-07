@@ -4,7 +4,7 @@ import React, {Component} from "react";
 import {Switch} from "react-router-dom";
 import Header from "./_frame/Header"
 import Main from "./_frame/Main"
-import Footer from "./_frame/Footer"
+// import Footer from "./_frame/Footer"
 
 // import logo from "./logo.svg";
 import "./_frame/Main.styl";
@@ -29,9 +29,10 @@ const App = () => (
     <div>
        <Header />
        <Main />
-       <Footer />
      </div>
 )
+       // <Footer />
+
   // }
 // }
        // <Header callback={this.updateNotesPage.bind(this)}/>

@@ -77741,6 +77741,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 var _jsxFileName = "/Users/Dan/Projects/reednotes/src/shared/App.js"; // shared folder. uses a switch from react-router-dom to iterate through all the routes.
 
+// import Footer from "./_frame/Footer"
+
 // import logo from "./logo.svg";
 
 var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
@@ -77756,10 +77758,6 @@ var _Header2 = _interopRequireDefault(_Header);
 var _Main = __webpack_require__(/*! ./_frame/Main */ "./src/shared/_frame/Main.js");
 
 var _Main2 = _interopRequireDefault(_Main);
-
-var _Footer = __webpack_require__(/*! ./_frame/Footer */ "./src/shared/_frame/Footer.js");
-
-var _Footer2 = _interopRequireDefault(_Footer);
 
 __webpack_require__(/*! ./_frame/Main.styl */ "./src/shared/_frame/Main.styl");
 
@@ -77805,17 +77803,12 @@ var App = function App() {
           lineNumber: 31
         },
         __self: undefined
-      }),
-      _react2.default.createElement(_Footer2.default, {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 32
-        },
-        __self: undefined
       })
     )
   );
 };
+// <Footer />
+
 // }
 // }
 // <Header callback={this.updateNotesPage.bind(this)}/>
@@ -77892,7 +77885,7 @@ var Footer = function Footer() {
           },
           __self: undefined
         },
-        "Daniel M. Reed"
+        "Daniel Reed"
       ),
       _react2.default.createElement(
         "span",
@@ -78022,7 +78015,7 @@ var Header = function Header() {
               },
               __self: undefined
             },
-            "Writings"
+            "Notes"
           )
         ),
         _react2.default.createElement(
@@ -78043,7 +78036,7 @@ var Header = function Header() {
             },
             _react2.default.createElement(
               "div",
-              { className: "topic-item", __source: {
+              { className: "topic-item active", __source: {
                   fileName: _jsxFileName,
                   lineNumber: 15
                 },
@@ -78206,6 +78199,12 @@ var _routes = __webpack_require__(/*! ./../routes */ "./src/shared/routes.js");
 
 var _routes2 = _interopRequireDefault(_routes);
 
+var _Footer = __webpack_require__(/*! ./Footer */ "./src/shared/_frame/Footer.js");
+
+var _Footer2 = _interopRequireDefault(_Footer);
+
+__webpack_require__(/*! ./Main.styl */ "./src/shared/_frame/Main.styl");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -78237,7 +78236,7 @@ var Main = function (_Component) {
         "main",
         { className: "content", __source: {
             fileName: _jsxFileName,
-            lineNumber: 11
+            lineNumber: 13
           },
           __self: this
         },
@@ -78246,7 +78245,7 @@ var Main = function (_Component) {
           {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 12
+              lineNumber: 14
             },
             __self: this
           },
@@ -78254,12 +78253,19 @@ var Main = function (_Component) {
             return _react2.default.createElement(_reactRouterDom.Route, Object.assign({ key: i }, route, {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 13
+                lineNumber: 15
               },
               __self: _this2
             }));
           })
-        )
+        ),
+        _react2.default.createElement(_Footer2.default, {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 17
+          },
+          __self: this
+        })
       );
     }
   }]);
@@ -78486,7 +78492,16 @@ var Home = function (_Component) {
             },
             __self: this
           },
-          "Hi I'm Dan,",
+          _react2.default.createElement(
+            "span",
+            { className: "hello", __source: {
+                fileName: _jsxFileName,
+                lineNumber: 56
+              },
+              __self: this
+            },
+            "Hi I'm Dan \uD83D\uDC4B"
+          ),
           _react2.default.createElement("div", { className: "pbreak", __source: {
               fileName: _jsxFileName,
               lineNumber: 57
@@ -78517,7 +78532,7 @@ var Home = function (_Component) {
             },
             __self: this
           }),
-          "I used to be a software exec in Los Angeles / Boston. These days I'm in Vancouver. I develop occasionally, mostly in tinkering with neural nets. I did my undergrad in math & physics at UBC.",
+          "I used to be a software exec in Los Angeles / Boston. These days I'm in Vancouver. I develop occasionally, mostly tinkering with neural nets. I double majored mathematics & physics at UBC.",
           _react2.default.createElement("br", {
             __source: {
               fileName: _jsxFileName,
@@ -78553,7 +78568,14 @@ var Home = function (_Component) {
               },
               "About This Website"
             ),
-            " Hand-built using React and Node. WordPress would have been the more sensible choice, came to mind after after much had been built."
+            _react2.default.createElement("br", {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 66
+              },
+              __self: this
+            }),
+            "Custom single-page-app (SPA) built using React and various of packages, served using Node and Webpack (primarily for SEO purposes), and hosted with Google's Firebase. For IP reasons the source code for this website remains private."
           )
         )
       );
@@ -79017,7 +79039,7 @@ var Memoir = function (_Component) {
               },
               __self: this
             },
-            "A Brief Memoir of Sorts"
+            "My Formative Years"
           ),
           _react2.default.createElement(
             "p",
@@ -79093,7 +79115,7 @@ var Memoir = function (_Component) {
             }),
             "During my stint, I served as Partner, President of Product, and when Will went to Shanghai to set up a distribution arm, CEO. It was not easy to run a company in my early twenties. Even on my very last day, I could not then say I had fully adjusted ",
             "\u2014",
-            " it was an unsteady experience plagued with crippling self-doubt, inadequacy, and perpetual anxiety. It a period where I made more mistakes than I thought humanly possible. But in in end, as anyone will tell you, going after what you would defend to your last breath is worth every tear drop. Coincidentally, it is an astoundingly good metric for picking things to work on.",
+            " it was an unsteady experience plagued with crippling self-doubt, inadequacy, and perpetual anxiety. It was also a period where I made more mistakes than I thought humanly possible. These events are ever imprinted in my mind, and as visceral and poignant as any day I recollect. The venture ultimately proved too much of an R&D project to be sustainable, but the technology we developed early on lives on in China as VideoJJ.",
             _react2.default.createElement("br", {
               __source: {
                 fileName: _jsxFileName,
@@ -79108,7 +79130,7 @@ var Memoir = function (_Component) {
               },
               __self: this
             }),
-            "As years pass, events in the rear-view mirror have only become more blury until they've gone entirely out of view. The difficulty is in reconciling just how finite things are. It sometimes helps to stop and look back. It helps to remember why I do what I do every day."
+            "The difficulty is in reconciling just how ephemeral and finite things are -- in technology, in life. It is occasionally comforting to stop and look back, to reminisce, even though it is not the most productive thing in the world. To see a younger self, the asperiations he once held, and after many years, they still hold true to some sense."
           )
         )
       );
@@ -79120,6 +79142,8 @@ var Memoir = function (_Component) {
 
 // I dearly miss working with my team, and to have worked on a technology that scarcely existed at the time, 
 //              end, I'm grateful to say I was part of the team that ushered in a few truly innovative products that scarcely existed at the time, and pulling the company out of a year-long nose-dive that nearly ended in our demise. Still, I dearly miss work with the friends with whom I embarked on this adventure and have met along the way.
+// As years pass, the rear-view mirror only become more blury until things go entirely out of view. Undoubtedly the shapes we do see we decide the brush strokes to color in our own memories, even in this -- to give things meaning. 
+
 
 exports.default = Memoir;
 
@@ -79293,15 +79317,25 @@ var Notes = function (_Component) {
             __self: this
           },
           _react2.default.createElement(
-            "span",
-            {
-              __source: {
+            "div",
+            { className: "limitations", __source: {
                 fileName: _jsxFileName,
                 lineNumber: 73
               },
               __self: this
             },
-            "Disclaimer: Views and opinions expressed on this website are my own. No representations or warrantees of any kind, expressed or implied is provided for the information herein. Any reliance you place is strictly at your own risk."
+            "Limitations of Warrantees"
+          ),
+          _react2.default.createElement(
+            "span",
+            {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 74
+              },
+              __self: this
+            },
+            "No representations or warrantees of any kind, expressed or implied is provided for the information contained on this website, nor shall it be construed as legal advice or relied upon as such."
           )
         ),
         _react2.default.createElement(

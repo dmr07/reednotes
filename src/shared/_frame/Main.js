@@ -1,6 +1,8 @@
 import React, {Component} from "react";
 import {Switch,Route} from "react-router-dom"
 import routes from "./../routes";
+import Footer from "./Footer"
+import "./Main.styl";
 
 class Main extends Component {
   componentDidMount() {
@@ -12,6 +14,7 @@ class Main extends Component {
        <Switch>
           {routes.map((route, i) => <Route key={i} {...route} />)}
         </Switch>
+        <Footer />
       </main>
     )
   }
