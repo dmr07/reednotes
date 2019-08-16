@@ -33,6 +33,43 @@ const api_properties = (app) => {
       }
       ])
   })
+  app.get("/api/arts", (req, res) => {
+    console.log('API: arts call');
+    res.json([
+      {
+        id: 1,
+        url: "https://storage.cloud.google.com/reedsnotes/rick-morty-run-the-jewels-oh-mama-video-0.jpg",
+        title: "Photo 1",
+        body: "Body 1",
+        date: "June 20, 2018",
+        topics:['software']
+      },
+      {
+        id: 2,
+        url: "https://storage.cloud.google.com/reedsnotes/20023988_329670130789042_322909095165992121_o.jpg",
+        title: "Photo 2",
+        body: "Body 2",
+        date: "June 20, 2018",
+        topics:['software']
+      },
+      {
+        id: 3,
+        url: "https://storage.cloud.google.com/reedsnotes/4909745-long-road-wallpapers.jpg",
+        title: "Photo 3",
+        body: "Body 3",
+        date: "June 20, 2018",
+        topics:['software']
+      },
+      {
+        id: 4,
+        url: "https://storage.cloud.google.com/reedsnotes/Charlie%20Brown%20Good%20Grief%20%C2%A9%20Peanuts_web%20header.png",
+        title: "Photo 3",
+        body: "Body 3",
+        date: "June 20, 2018",
+        topics:['software']
+      },
+      ])
+  })
 };
 
 export {api_properties}

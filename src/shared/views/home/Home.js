@@ -64,7 +64,7 @@ class Home extends Component {
             <div className="sub-info">
               <span className="about-site">About This Website</span>
               <br></br>
-              Custom single-page-app (SPA) built using React and various of packages, served using Node and Webpack (primarily for SEO purposes), and hosted with Google's Firebase. For IP reasons the source code for this website remains private.
+              Custom single-page-app (SPA) built using React and various of packages, served using Node and Webpack (mostly for SEO compatibility, though not yet optimized), and hosted with Google's Firebase. For IP reasons the source code for this website remains private.
             </div>
         </div>
       </div>

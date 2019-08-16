@@ -229,14 +229,18 @@ app.use((0, _serveFavicon2.default)("src/client/media/favicon.ico"));
 (0, _api_properties.api_properties)(app);
 
 app.get("*", function (req, res, next) {
-  console.log("+++++++++++++++++++++++++++++++");
-  console.log(req.url);
+  console.log("________________________");
+  console.log("Incoming Request");
+  console.log("URL: ", req.url);
+  console.log("Path: ", req.url);
+  console.log(_routes2.default);
 
   // test each route in routes with match path
   var activeRoute = _routes2.default.find(function (route) {
     return (0, _reactRouterDom.matchPath)(req.path, route);
   });
   console.log("ACTIVE ROUTE:", activeRoute);
+  console.log("________________________");
 
   var promise = activeRoute.fetchInitialData ? activeRoute.requestInitialData(req.path) : Promise.resolve();
 
@@ -246,14 +250,14 @@ app.get("*", function (req, res, next) {
       _reactRouterDom.StaticRouter,
       { location: req.url, context: context, __source: {
           fileName: _jsxFileName,
-          lineNumber: 51
+          lineNumber: 55
         },
         __self: undefined
       },
       _react2.default.createElement(_App2.default, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 52
+          lineNumber: 56
         },
         __self: undefined
       })
@@ -516,6 +520,38 @@ var api_properties = function api_properties(app) {
       body: "<p>Always have an agenda. Meandering meetings annoy everyone. Keep an internal clock in your head. If people are stuck on something for too long, and it’s only meant to be an update meeting, put a pin in it and schedule to come back. \n Drawn out meetings will annoy the crap out of really good engineers. Goal is to update everyone’s progress, resolve dependencies - a place where guy X needs guy Y to finish something but never gets around to talking to guy Y, so it just gets shelved.</p>",
       date: "February 14, 2019",
       topics: ['startups']
+    }]);
+  });
+  app.get("/api/arts", function (req, res) {
+    console.log('API: arts call');
+    res.json([{
+      id: 1,
+      url: "https://storage.cloud.google.com/reedsnotes/rick-morty-run-the-jewels-oh-mama-video-0.jpg",
+      title: "Photo 1",
+      body: "Body 1",
+      date: "June 20, 2018",
+      topics: ['software']
+    }, {
+      id: 2,
+      url: "https://storage.cloud.google.com/reedsnotes/20023988_329670130789042_322909095165992121_o.jpg",
+      title: "Photo 2",
+      body: "Body 2",
+      date: "June 20, 2018",
+      topics: ['software']
+    }, {
+      id: 3,
+      url: "https://storage.cloud.google.com/reedsnotes/4909745-long-road-wallpapers.jpg",
+      title: "Photo 3",
+      body: "Body 3",
+      date: "June 20, 2018",
+      topics: ['software']
+    }, {
+      id: 4,
+      url: "https://storage.cloud.google.com/reedsnotes/Charlie%20Brown%20Good%20Grief%20%C2%A9%20Peanuts_web%20header.png",
+      title: "Photo 3",
+      body: "Body 3",
+      date: "June 20, 2018",
+      topics: ['software']
     }]);
   });
 };
@@ -807,9 +843,29 @@ var Header = function Header() {
           },
           _react2.default.createElement(
             _reactRouterDom.Link,
-            { to: "/notes", __source: {
+            { to: "/", __source: {
                 fileName: _jsxFileName,
                 lineNumber: 12
+              },
+              __self: undefined
+            },
+            "Home"
+          )
+        ),
+        _react2.default.createElement(
+          "li",
+          {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 13
+            },
+            __self: undefined
+          },
+          _react2.default.createElement(
+            _reactRouterDom.Link,
+            { to: "/notes", __source: {
+                fileName: _jsxFileName,
+                lineNumber: 13
               },
               __self: undefined
             },
@@ -820,7 +876,7 @@ var Header = function Header() {
           "div",
           { className: "topic-list", __source: {
               fileName: _jsxFileName,
-              lineNumber: 13
+              lineNumber: 14
             },
             __self: undefined
           },
@@ -828,7 +884,7 @@ var Header = function Header() {
             _reactRouterDom.Link,
             { to: "/notes/software", __source: {
                 fileName: _jsxFileName,
-                lineNumber: 14
+                lineNumber: 15
               },
               __self: undefined
             },
@@ -836,7 +892,7 @@ var Header = function Header() {
               "div",
               { className: "topic-item active", __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 15
+                  lineNumber: 16
                 },
                 __self: undefined
               },
@@ -844,44 +900,80 @@ var Header = function Header() {
             )
           ),
           _react2.default.createElement(
-            "div",
-            { className: "topic-item", __source: {
-                fileName: _jsxFileName,
-                lineNumber: 17
-              },
-              __self: undefined
-            },
-            "Startups"
-          ),
-          _react2.default.createElement(
-            "div",
-            { className: "topic-item", __source: {
+            _reactRouterDom.Link,
+            { to: "/notes/startups", __source: {
                 fileName: _jsxFileName,
                 lineNumber: 18
               },
               __self: undefined
             },
-            "Design"
+            _react2.default.createElement(
+              "div",
+              { className: "topic-item", __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 19
+                },
+                __self: undefined
+              },
+              "Startups"
+            )
           ),
           _react2.default.createElement(
-            "div",
-            { className: "topic-item", __source: {
+            _reactRouterDom.Link,
+            { to: "/notes/art", __source: {
                 fileName: _jsxFileName,
-                lineNumber: 19
+                lineNumber: 21
               },
               __self: undefined
             },
-            "Physics"
+            _react2.default.createElement(
+              "div",
+              { className: "topic-item", __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 22
+                },
+                __self: undefined
+              },
+              "Design"
+            )
           ),
           _react2.default.createElement(
-            "div",
-            { className: "topic-item", __source: {
+            _reactRouterDom.Link,
+            { to: "/notes/physics", __source: {
                 fileName: _jsxFileName,
-                lineNumber: 20
+                lineNumber: 24
               },
               __self: undefined
             },
-            "Other"
+            _react2.default.createElement(
+              "div",
+              { className: "topic-item", __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 25
+                },
+                __self: undefined
+              },
+              "Physics"
+            )
+          ),
+          _react2.default.createElement(
+            _reactRouterDom.Link,
+            { to: "/notes/other", __source: {
+                fileName: _jsxFileName,
+                lineNumber: 27
+              },
+              __self: undefined
+            },
+            _react2.default.createElement(
+              "div",
+              { className: "topic-item", __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 28
+                },
+                __self: undefined
+              },
+              "Other"
+            )
           )
         ),
         _react2.default.createElement(
@@ -889,7 +981,7 @@ var Header = function Header() {
           {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 22
+              lineNumber: 31
             },
             __self: undefined
           },
@@ -897,7 +989,7 @@ var Header = function Header() {
             _reactRouterDom.Link,
             { to: "/projects", __source: {
                 fileName: _jsxFileName,
-                lineNumber: 22
+                lineNumber: 31
               },
               __self: undefined
             },
@@ -909,19 +1001,19 @@ var Header = function Header() {
           {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 23
+              lineNumber: 32
             },
             __self: undefined
           },
           _react2.default.createElement(
             _reactRouterDom.Link,
-            { to: "/design", __source: {
+            { to: "/artanddesign", __source: {
                 fileName: _jsxFileName,
-                lineNumber: 23
+                lineNumber: 32
               },
               __self: undefined
             },
-            "Design"
+            "Art & Design"
           )
         ),
         _react2.default.createElement(
@@ -929,7 +1021,7 @@ var Header = function Header() {
           {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 24
+              lineNumber: 33
             },
             __self: undefined
           },
@@ -937,7 +1029,7 @@ var Header = function Header() {
             _reactRouterDom.Link,
             { to: "/memoir", __source: {
                 fileName: _jsxFileName,
-                lineNumber: 24
+                lineNumber: 33
               },
               __self: undefined
             },
@@ -1112,6 +1204,14 @@ var _Memoir = __webpack_require__(/*! ./views/memoir/Memoir */ "./src/shared/vie
 
 var _Memoir2 = _interopRequireDefault(_Memoir);
 
+var _ArtAndDesign = __webpack_require__(/*! ./views/artanddesign/ArtAndDesign */ "./src/shared/views/artanddesign/ArtAndDesign.js");
+
+var _ArtAndDesign2 = _interopRequireDefault(_ArtAndDesign);
+
+var _Projects = __webpack_require__(/*! ./views/projects/Projects */ "./src/shared/views/projects/Projects.js");
+
+var _Projects2 = _interopRequireDefault(_Projects);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var routes = [{
@@ -1122,19 +1222,413 @@ var routes = [{
   path: "/notes/:topic?", // ? says optional so /notes works.
   component: _Notes2.default
   // exact: true // turn this off when you use params. otherwise match won't work.
-},
-// {
-//   path: "/projects",
-//   component: Projects,
-//   exact: true
-// },
-{
+}, {
+  path: "/artanddesign",
+  component: _ArtAndDesign2.default
+  // exact: true
+}, {
+  path: "/projects",
+  component: _Projects2.default,
+  exact: true
+}, {
   path: "/memoir",
   component: _Memoir2.default,
   exact: true
 }];
 
 exports.default = routes;
+
+/***/ }),
+
+/***/ "./src/shared/views/artanddesign/ArtAndDesign.js":
+/*!*******************************************************!*\
+  !*** ./src/shared/views/artanddesign/ArtAndDesign.js ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var _jsxFileName = "/Users/Dan/Projects/reednotes/src/shared/views/artanddesign/ArtAndDesign.js";
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(/*! react */ "react");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRouterDom = __webpack_require__(/*! react-router-dom */ "react-router-dom");
+
+__webpack_require__(/*! ./ArtAndDesign.styl */ "./src/shared/views/artanddesign/ArtAndDesign.styl");
+
+var _reactHelmet = __webpack_require__(/*! react-helmet */ "react-helmet");
+
+var _PhotoGrid = __webpack_require__(/*! ./PhotoGrid */ "./src/shared/views/artanddesign/PhotoGrid.js");
+
+var _PhotoGrid2 = _interopRequireDefault(_PhotoGrid);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var ArtAndDesign = function (_Component) {
+  _inherits(ArtAndDesign, _Component);
+
+  function ArtAndDesign(props) {
+    _classCallCheck(this, ArtAndDesign);
+
+    var _this = _possibleConstructorReturn(this, (ArtAndDesign.__proto__ || Object.getPrototypeOf(ArtAndDesign)).call(this, props));
+
+    var initialData = void 0;
+    if (props.staticContext) {
+      initialData = props.staticContext.initialData;
+    } else {
+      initialData = window.__initialData__;
+      delete window.__initialData__;
+    }
+
+    _this.state = {
+      initialData: initialData,
+      photoObjs: initialData
+    };
+    return _this;
+  }
+
+  _createClass(ArtAndDesign, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var _this2 = this;
+
+      if (!this.state.photoObjs) {
+        ArtAndDesign.requestInitialData().then(function (data) {
+          console.log(data);
+          _this2.setState({ initialData: data });
+          // let params = this.props.match.params
+          // if ( params && params.topic ) {
+          //   let topic = this.props.match.params.topic;
+          //   let results = data.filter(article => article.topics.includes(topic))
+          //   this.setState({ objs: results })
+          // } else {
+          _this2.setState({ photoObjs: data });
+          // }
+        });
+      }
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var photoObjs = this.state.photoObjs;
+
+      return _react2.default.createElement(
+        "div",
+        {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 54
+          },
+          __self: this
+        },
+        _react2.default.createElement(
+          _reactHelmet.Helmet,
+          {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 55
+            },
+            __self: this
+          },
+          _react2.default.createElement("meta", { charSet: "utf-8", __source: {
+              fileName: _jsxFileName,
+              lineNumber: 56
+            },
+            __self: this
+          }),
+          _react2.default.createElement(
+            "title",
+            {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 57
+              },
+              __self: this
+            },
+            "Reed's Notes | Art & Design"
+          ),
+          _react2.default.createElement("link", { rel: "canonical", href: "http://reedsnotes.com/artanddesign", __source: {
+              fileName: _jsxFileName,
+              lineNumber: 58
+            },
+            __self: this
+          })
+        ),
+        _react2.default.createElement(
+          "div",
+          { className: "liabilityDisclaimer", __source: {
+              fileName: _jsxFileName,
+              lineNumber: 60
+            },
+            __self: this
+          },
+          _react2.default.createElement(
+            "div",
+            { className: "limitations", __source: {
+                fileName: _jsxFileName,
+                lineNumber: 61
+              },
+              __self: this
+            },
+            "Note"
+          ),
+          _react2.default.createElement(
+            "span",
+            {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 62
+              },
+              __self: this
+            },
+            "UI works are purposely excluded in this exhibition."
+          )
+        ),
+        _react2.default.createElement(
+          "div",
+          { className: "photo-list", __source: {
+              fileName: _jsxFileName,
+              lineNumber: 66
+            },
+            __self: this
+          },
+          _react2.default.createElement(_PhotoGrid2.default, {
+            objs: photoObjs,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 67
+            },
+            __self: this
+          })
+        )
+      );
+    }
+  }], [{
+    key: "requestInitialData",
+    value: function requestInitialData() {
+      return fetch("http://127.0.0.1:3000/api/arts").then(function (response) {
+        return response.json();
+      }).catch(function (error) {
+        return console.log(error);
+      });
+    }
+  }]);
+
+  return ArtAndDesign;
+}(_react.Component);
+
+exports.default = ArtAndDesign;
+
+/***/ }),
+
+/***/ "./src/shared/views/artanddesign/ArtAndDesign.styl":
+/*!*********************************************************!*\
+  !*** ./src/shared/views/artanddesign/ArtAndDesign.styl ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./src/shared/views/artanddesign/PhotoGrid.js":
+/*!****************************************************!*\
+  !*** ./src/shared/views/artanddesign/PhotoGrid.js ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var _jsxFileName = "/Users/Dan/Projects/reednotes/src/shared/views/artanddesign/PhotoGrid.js";
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(/*! react */ "react");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _nodeTimeAgo = __webpack_require__(/*! node-time-ago */ "node-time-ago");
+
+var _nodeTimeAgo2 = _interopRequireDefault(_nodeTimeAgo);
+
+var _orderBy = __webpack_require__(/*! lodash/orderBy */ "lodash/orderBy");
+
+var _orderBy2 = _interopRequireDefault(_orderBy);
+
+__webpack_require__(/*! ./PhotoGrid.styl */ "./src/shared/views/artanddesign/PhotoGrid.styl");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+// import w18 from "./w18.png";
+
+
+// params: props("objs")
+var PhotoGrid = function (_Component) {
+  _inherits(PhotoGrid, _Component);
+
+  function PhotoGrid() {
+    var _ref;
+
+    var _temp, _this, _ret;
+
+    _classCallCheck(this, PhotoGrid);
+
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = PhotoGrid.__proto__ || Object.getPrototypeOf(PhotoGrid)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+      sortOrder: "date"
+    }, _temp), _possibleConstructorReturn(_this, _ret);
+  }
+
+  _createClass(PhotoGrid, [{
+    key: "setOrder",
+    value: function setOrder(order, event) {
+      event.preventDefault();
+      this.setState({ sortOrder: order });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this2 = this;
+
+      var photos = (0, _orderBy2.default)(this.props.objs, this.state.date, "desc");
+
+      return _react2.default.createElement(
+        "div",
+        { className: "photogrid", __source: {
+            fileName: _jsxFileName,
+            lineNumber: 21
+          },
+          __self: this
+        },
+        photos && photos.map(function (item) {
+          return _react2.default.createElement(
+            "div",
+            { key: item.id, className: "news-item", __source: {
+                fileName: _jsxFileName,
+                lineNumber: 25
+              },
+              __self: _this2
+            },
+            _react2.default.createElement("div", { className: "photo-img", style: { background: "url(" + item.url + ")" }, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 26
+              },
+              __self: _this2
+            }),
+            _react2.default.createElement(
+              "div",
+              { className: "photo-title", __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 27
+                },
+                __self: _this2
+              },
+              item.title
+            ),
+            _react2.default.createElement(
+              "div",
+              { className: "photo-topic", __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 28
+                },
+                __self: _this2
+              },
+              item.topics[0]
+            ),
+            _react2.default.createElement(
+              "div",
+              { className: "photo-timestamp", __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 29
+                },
+                __self: _this2
+              },
+              item.date
+            ),
+            _react2.default.createElement("div", { className: "photo-body", dangerouslySetInnerHTML: { __html: item.body }, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 30
+              },
+              __self: _this2
+            }),
+            _react2.default.createElement("div", { className: "photo-divider", __source: {
+                fileName: _jsxFileName,
+                lineNumber: 31
+              },
+              __self: _this2
+            })
+          );
+        })
+      );
+    }
+  }]);
+
+  return PhotoGrid;
+}(_react.Component);
+
+// <span className="news-position">{photo.id}. ▲</span> {photo.title}{" "}
+// <div className="header">
+// <div className="header-title">
+// <strong>Wizard News</strong>
+// </div>
+// <div className="sort">
+// Sort By:{" "}
+// <a
+// href="#"
+// className={(this.state.sortOrder === "upvotes" && "sort-selected") ? "woo" : "fud"}
+// onClick={this.setOrder.bind(this, "upvotes")}>
+// Upvotes
+// </a>|
+// <a
+// href="#"
+// className={(this.state.sortOrder === "date" && "sort-selected") ? "woo" : "fud"}
+// onClick={this.setOrder.bind(this, "date")}>
+// Date
+// </a>
+// </div>
+// </div>
+
+exports.default = PhotoGrid;
+
+/***/ }),
+
+/***/ "./src/shared/views/artanddesign/PhotoGrid.styl":
+/*!******************************************************!*\
+  !*** ./src/shared/views/artanddesign/PhotoGrid.styl ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 
@@ -1373,7 +1867,7 @@ var Home = function (_Component) {
               },
               __self: this
             }),
-            "Custom single-page-app (SPA) built using React and various of packages, served using Node and Webpack (primarily for SEO purposes), and hosted with Google's Firebase. For IP reasons the source code for this website remains private."
+            "Custom single-page-app (SPA) built using React and various of packages, served using Node and Webpack (mostly for SEO compatibility, though not yet optimized), and hosted with Google's Firebase. For IP reasons the source code for this website remains private."
           )
         )
       );
@@ -1837,43 +2331,39 @@ var Memoir = function (_Component) {
               },
               __self: this
             },
-            "My Formative Years"
+            "Formative Years"
           ),
           _react2.default.createElement(
             "p",
             { className: "paragraphs", __source: {
                 fileName: _jsxFileName,
-                lineNumber: 24
+                lineNumber: 25
               },
               __self: this
             },
-            "At one point my parents and I lived near an oil refinery. Mother wasn't so fond of that fact, it never didn't bothered me as much; the place quickly grew on me. This was at the outskirts of San Francisco, a charming little town of twenty-six thousand residents, a place where you knew the regulars on a first-name basis, and where everyday felt like a sunny afternoon. Back then mom and dad worked in the wine business, and every so often I got to tag along to Napa Valley or wherever ",
+            "[too self important] [goal is to seem likeable] I suppose you'd like to know a bit more about me ",
             "\u2014",
-            " I cherished every moment.",
+            " how I've ",
+            _react2.default.createElement(
+              "i",
+              {
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 27
+                },
+                __self: this
+              },
+              "become"
+            ),
+            " who I am rather than outright what I am. Interpolation is best left for the readers, but regretably authors have all too much power in crafting between the lines. Some memories are rosier than others, some I choose to forget altogether. The narrative of my past are contrived, consciously or otherwise, as all narratives are, and therefore cannot fully account for whom I've become, if such things exist. Rather, I believe it is the vivid imagery of the failures, the embarrassments, that chiefly shape one's character. As it is my blog, What I make public are the things I cherish, and at times I will not prioritize clarity or value to outsiders over my own personal reasons. Extrapolate and compare at your risk.",
             _react2.default.createElement("br", {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 26
+                lineNumber: 28
               },
               __self: this
             }),
-            _react2.default.createElement("br", {
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 27
-              },
-              __self: this
-            }),
-            "We lived in a little two story townhouse that overlooked golden hills that rolled on for miles across the Carquinez Strait ",
-            "\u2014",
-            " the sweet summer breeze, the dusty sun-spotted trails, the trains that would encircle. At nights by the town dock, I would sit and quietly gaze at the stars. The leaves rustled in the wind.",
-            _react2.default.createElement("br", {
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 29
-              },
-              __self: this
-            }),
+            "I find difficulty in reconciling just how ephemeral and finite things are, in technology as is in life -- it can sometimes feel like peddling against quicksand. In these times it is occasionally comforting to stop and look back, to reminisce. To see a younger self and the asprirations he held, and that after nearly a decade, those same aspirations still kindle a sense of purpose, as true as an arrow, as they once did.",
             _react2.default.createElement("br", {
               __source: {
                 fileName: _jsxFileName,
@@ -1881,7 +2371,9 @@ var Memoir = function (_Component) {
               },
               __self: this
             }),
-            "On days I didn't have school I took every opportunity to slink off to Berkeley. I loved auditing lectures, and this drove the attendance person crazy. It was also at Berkeley that I got a first glimpse of how palpable technology are. By the time I entered college, I was so set on starting a tech company that I didn't end up staying for very long. Around junior year, I got antsy, and boarded a plane to Boston.",
+            "At one point my parents and I lived near an oil refinery. Mother wasn't so fond of that fact, it never didn't bothered me as much; the place quickly grew on me. This was at the outskirts of San Francisco, a charming little town of twenty-six thousand residents, a place where you knew the regulars on a first-name basis, and where everyday felt like a sunny afternoon. Back then mom and dad worked in the wine business, and every so often I got to tag along to Napa Valley or wherever ",
+            "\u2014",
+            " I cherished those days.",
             _react2.default.createElement("br", {
               __source: {
                 fileName: _jsxFileName,
@@ -1896,7 +2388,9 @@ var Memoir = function (_Component) {
               },
               __self: this
             }),
-            "This little project I worked on in my early twenties with my dear friends Will and Sergei has been the center-fold of my life thus far. The advent of HTML5 video in 2011 brought about an opportunity to link powerful object tracking and identification technology with in-video interaction. We scrambled to get working prototypes and to secure initial interest. Will was at Harvard at the time and got us funded; he was a big source of our early momentum. Admittedly I was very lucky to have had such wonderful partners and to have been in that area.",
+            "We lived in a little two story townhouse that overlooked golden hills that rolled on for miles across the Carquinez Strait ",
+            "\u2014",
+            " the sweet summer breeze, the dusty sun-spotted trails, the trains that would encircle. At nights by the town dock, I would sit and quietly gaze at the stars. The leaves rustled in the wind.",
             _react2.default.createElement("br", {
               __source: {
                 fileName: _jsxFileName,
@@ -1911,9 +2405,7 @@ var Memoir = function (_Component) {
               },
               __self: this
             }),
-            "During my stint, I served as Partner, President of Product, and when Will went to Shanghai to set up a distribution arm, CEO. It was not easy to run a company in my early twenties. Even on my very last day, I could not then say I had fully adjusted ",
-            "\u2014",
-            " it was an unsteady experience plagued with crippling self-doubt, inadequacy, and perpetual anxiety. It was also a period where I made more mistakes than I thought humanly possible. These events are ever imprinted in my mind, and as visceral and poignant as any day I recollect. The venture ultimately proved too much of an R&D project to be sustainable, but the technology we developed early on lives on in China as VideoJJ.",
+            "On days I didn't have school I took every opportunity to slink off to Berkeley. I loved auditing lectures, and this drove the attendance person crazy. It was also at Berkeley that I got a first taste of the excitement around technology. By the time I entered university, I was so set on starting a tech company that I didn't end up staying for very long. Around junior year, I got antsy, and boarded a plane to Boston.",
             _react2.default.createElement("br", {
               __source: {
                 fileName: _jsxFileName,
@@ -1928,7 +2420,37 @@ var Memoir = function (_Component) {
               },
               __self: this
             }),
-            "The difficulty is in reconciling just how ephemeral and finite things are -- in technology, in life. It is occasionally comforting to stop and look back, to reminisce, even though it is not the most productive thing in the world. To see a younger self, the asperiations he once held, and after many years, they still hold true to some sense."
+            "This project I worked on in my early twenties with my dear friends Will and Sergei has been the center-fold of my life thus far. The advent of HTML5 video in 2011 brought about an opportunity to link powerful object tracking and identification technology with online video interaction. We scrambled to get working prototypes and to secure initial interest. Will, at Harvard at the time, got us funded and eventually dropped out like I did to pursue this full-time; he was a big source of our early momentum. Admittedly I was very lucky to have had such wonderful partners and to have been in Boston at that time.",
+            _react2.default.createElement("br", {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 41
+              },
+              __self: this
+            }),
+            _react2.default.createElement("br", {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 42
+              },
+              __self: this
+            }),
+            "These years are perhaps the most eye-opening and formative years I have had to date. During my stint, I served as Partner, President of Product, and when Will left for Shanghai to set up a distribution arm, CEO. The expectations to meet payroll, develop the product, and acquire users were overwhelming. To my very last day and even long after, there was always a steady cadence self-doubt, inadequacy, and anxiety. [It was also a period where I made more mistakes than I thought humanly possible. Some events in that period, details of which I will spare for my own sanity, are imprinted in my mind as viscerally and poignant as any day I can recollect.][Who cares, no detail at all.] The venture ultimately proved too much of an R&D project to be sustainable in North America, but the technology we developed early on lives on in China (due to cheaper labor and better funding) as VideoJJ.",
+            _react2.default.createElement("br", {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 44
+              },
+              __self: this
+            }),
+            _react2.default.createElement("br", {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 45
+              },
+              __self: this
+            }),
+            "As for me, I took some time off to attend pursuits I had been putting off."
           )
         )
       );
@@ -2365,6 +2887,114 @@ exports.default = NotesList;
 /*!***********************************************!*\
   !*** ./src/shared/views/notes/NotesList.styl ***!
   \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./src/shared/views/projects/Projects.js":
+/*!***********************************************!*\
+  !*** ./src/shared/views/projects/Projects.js ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var _jsxFileName = "/Users/Dan/Projects/reednotes/src/shared/views/projects/Projects.js";
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(/*! react */ "react");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRouterDom = __webpack_require__(/*! react-router-dom */ "react-router-dom");
+
+__webpack_require__(/*! ./Projects.styl */ "./src/shared/views/projects/Projects.styl");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Projects = function (_Component) {
+  _inherits(Projects, _Component);
+
+  function Projects() {
+    _classCallCheck(this, Projects);
+
+    return _possibleConstructorReturn(this, (Projects.__proto__ || Object.getPrototypeOf(Projects)).apply(this, arguments));
+  }
+
+  _createClass(Projects, [{
+    key: "render",
+    value: function render() {
+      return _react2.default.createElement(
+        "div",
+        { className: "home-wrapper", __source: {
+            fileName: _jsxFileName,
+            lineNumber: 8
+          },
+          __self: this
+        },
+        _react2.default.createElement(
+          Helmet,
+          {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 9
+            },
+            __self: this
+          },
+          _react2.default.createElement("meta", { charSet: "utf-8", __source: {
+              fileName: _jsxFileName,
+              lineNumber: 10
+            },
+            __self: this
+          }),
+          _react2.default.createElement(
+            "title",
+            {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 11
+              },
+              __self: this
+            },
+            "ReedNotes | Projects"
+          ),
+          _react2.default.createElement("link", { rel: "canonical", href: "http://reednotes.com/friends", __source: {
+              fileName: _jsxFileName,
+              lineNumber: 12
+            },
+            __self: this
+          })
+        )
+      );
+    }
+  }]);
+
+  return Projects;
+}(_react.Component);
+
+exports.default = Projects;
+
+/***/ }),
+
+/***/ "./src/shared/views/projects/Projects.styl":
+/*!*************************************************!*\
+  !*** ./src/shared/views/projects/Projects.styl ***!
+  \*************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 

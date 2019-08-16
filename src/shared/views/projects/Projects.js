@@ -1,17 +1,19 @@
 import React, {Component} from "react";
 import {Link} from "react-router-dom";
-import "./home.css"
+import "./Projects.styl"
       
-class InfoOverview extends Component {
+class Projects extends Component {
   render() {
     return (
+      <div className="home-wrapper">
         <Helmet>
           <meta charSet="utf-8" />
-          <title>ReedNotes | Friends</title>
+          <title>ReedNotes | Projects</title>
           <link rel="canonical" href="http://reednotes.com/friends" />
         </Helmet>
+      </div>
       )
   }
 }
 
-export default InfoOverview;
+export default Projects;

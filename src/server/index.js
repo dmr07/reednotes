@@ -34,12 +34,16 @@ app.use(favicon("src/client/media/favicon.ico"))
 api_properties(app);
 
 app.get("*", (req, res, next) => {
-  console.log("+++++++++++++++++++++++++++++++");
-  console.log(req.url);
+  console.log("________________________")
+  console.log("Incoming Request")
+  console.log("URL: ", req.url);
+  console.log("Path: ", req.url);
+  console.log(routes)
 
   // test each route in routes with match path
   const activeRoute = routes.find(route => matchPath(req.path, route))
   console.log("ACTIVE ROUTE:", activeRoute);
+  console.log("________________________")
 
   const promise = activeRoute.fetchInitialData
     ? activeRoute.requestInitialData(req.path)
